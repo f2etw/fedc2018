@@ -1,0 +1,9 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "rules": {
+    "function-paren-newline": ["error", "consistent"],
+    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx"] }],
+    "jsx-a11y/media-has-caption": [0]
+  }
+}
