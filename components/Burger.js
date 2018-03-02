@@ -1,16 +1,28 @@
-import react from 'react'
-import Link from 'next/link'
+import React from 'react';
+import Link from 'next/link';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-import styled from 'styled-components'
+const Burger = ({ className, active, href }) => (
+  <Link href={href}>
+    <img
+      className={className}
+      src={active ? '/static/icon/icon_close.svg' : '/static/icon/icon_menu.svg'}
+      alt=""
+    />
+  </Link>
+);
 
-const Burger = ({ className, active = false, href = '/' }) => (
-	<Link href={href}>
-		<img
-			src={
-				active ? '/static/icon/icon_close.svg' : '/static/icon/icon_menu.svg'
-			}
-		/>
-	</Link>
-)
+Burger.propTypes = {
+  className: PropTypes.string,
+  active: PropTypes.bool,
+  href: PropTypes.string,
+};
 
-export default styled(Burger)``
+Burger.defaultProps = {
+  className: '',
+  active: false,
+  href: '',
+};
+
+export default styled(Burger)``;
