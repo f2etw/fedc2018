@@ -1,17 +1,27 @@
 import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
-import { ServerStyleSheet } from 'styled-components';
+import { injectGlobal, ServerStyleSheet } from 'styled-components';
+
+injectGlobal`
+	body {
+		background-color: #311e6d;
+	}
+	body * {
+		font-family: 'Barlow', sans-serif;
+	}
+`;
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet();
     const page = renderPage(App => props =>
       sheet.collectStyles(<App {...props} />));
-    const styleTags = sheet.getStyleElement();
-    return { ...page, styleTags };
+    const style = sheet.getStyleElement();
+    return { ...page, style };
   }
 
   render() {
+		const { style } = this.props;
     return (
       <html lang="zh-TW">
         <Head>
@@ -23,15 +33,10 @@ export default class MyDocument extends Document {
           />
           <link href="/static/reset.css" rel="stylesheet" />
           <link
-            href="https://fonts.googleapis.com/css?family=Barlow:400,500,700"
+            href="https://fonts.googleapis.com/css?family=Barlow"
             rel="stylesheet"
           />
-          <style>
-            {`body{
-              background-color: #311e6d;
-            }`}
-          </style>
-          {this.props.styleTags}
+          {style}
         </Head>
         <body>
           <Main />
