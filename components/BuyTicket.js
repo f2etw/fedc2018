@@ -1,29 +1,16 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { PureComponent } from 'react';
 
-export default styled(props => (
-  <button {...props}>
-    <span>Buy Ticket</span>
-  </button>
-))`
-  font-family: Barlow;
-  font-weight: 500;
-  font-size: 24px;
-  color: #02f694;
-  letter-spacing: 0.5px;
-  text-align: left;
-  background-image: url('/static/btn_ticket_n.svg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 100% 100%;
-  width: 200px;
-  height: 60px;
-  padding-left: 56px;
-  &:hover {
-    background-image: url('/static/btn_ticket_h.svg');
+class BuyTicket extends PureComponent {
+  render() {
+    return (
+      <svg width="12.5rem" height="4rem" viewBox="0 0 204 64" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M3.5 42.394V57A3.5 3.5 0 0 0 7 60.5h190a3.5 3.5 0 0 0 3.5-3.5V7a3.5 3.5 0 0 0-3.5-3.5H7A3.5 3.5 0 0 0 3.5 7v14.606c5.088.728 9 5.104 9 10.394s-3.912 9.666-9 10.394zM2 39.5a7.5 7.5 0 0 0 0-15A1.5 1.5 0 0 1 .5 23V7A6.5 6.5 0 0 1 7 .5h190a6.5 6.5 0 0 1 6.5 6.5v50a6.5 6.5 0 0 1-6.5 6.5H7A6.5 6.5 0 0 1 .5 57V41A1.5 1.5 0 0 1 2 39.5zM30.5 1A1.5 1.5 0 0 1 32 2.5v4a1.5 1.5 0 0 1-3 0v-4A1.5 1.5 0 0 1 30.5 1zm0 11a1.5 1.5 0 0 1 1.5 1.5v4a1.5 1.5 0 0 1-3 0v-4a1.5 1.5 0 0 1 1.5-1.5zm0 11a1.5 1.5 0 0 1 1.5 1.5v4a1.5 1.5 0 0 1-3 0v-4a1.5 1.5 0 0 1 1.5-1.5zm0 11a1.5 1.5 0 0 1 1.5 1.5v4a1.5 1.5 0 0 1-3 0v-4a1.5 1.5 0 0 1 1.5-1.5zm0 11a1.5 1.5 0 0 1 1.5 1.5v4a1.5 1.5 0 0 1-3 0v-4a1.5 1.5 0 0 1 1.5-1.5zm0 11a1.5 1.5 0 0 1 1.5 1.5v4a1.5 1.5 0 0 1-3 0v-4a1.5 1.5 0 0 1 1.5-1.5z"
+          fill="#02F694"
+        />
+      </svg>
+    );
   }
-  &:active {
-    background-image: url('/static/btn_ticket_p.svg');
-    color: #321f6e;
-  }
-`;
+}
+
+export default BuyTicket;

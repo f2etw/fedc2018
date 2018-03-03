@@ -1,31 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
-const Bold = styled.div`
-  font-weight: 700;
+const Month = styled.div`
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  letter-spacing: 0.13rem;
 `;
 
-const Date = ({ className }) => (
-  <time className={className}>
-    <Bold>14 JUL</Bold>
-    <div>2018</div>
+const Year = styled.div`
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.1rem;
+`;
+
+const Date = () => (
+  <time dateTime="2018-07-17 09:00">
+    <Month>14 JUL</Month>
+    <Year>2018</Year>
   </time>
 );
 
-Date.propTypes = {
-  className: PropTypes.string,
-};
-
-Date.defaultProps = {
-  className: '',
-};
-
-export default styled(Date)`
-  display: block;
-  font-family: Barlow;
-  font-size: 24px;
-  color: #02f694;
-  letter-spacing: 2px;
-  line-height: 36px;
-`;
+export default Date;
