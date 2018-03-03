@@ -4,9 +4,7 @@ import styled from 'styled-components';
 import Burger from '../components/Burger';
 import CallForSpeakers from '../components/CallForSpeakers';
 import BuyTicket from '../components/BuyTicket';
-import Logo from '../components/Logo';
-import Year from '../components/Year';
-import Fedc from '../components/Fedc';
+import CoverLogo from '../components/CoverLogo';
 import Date from '../components/Date';
 import Location from '../components/Location';
 import Sponsor from '../components/Sponsor';
@@ -62,32 +60,6 @@ const Buttons = styled.div`
   }
 `;
 
-const Cover = styled.div`
-  position: relative;
-  width: 400px;
-  height: 200px;
-  margin-top: -200px;
-`;
-
-const LogoContainer = styled.div`
-  width: 400px;
-  margin: 0 auto;
-`;
-
-const YearContainer = styled.div`
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translate(23.5px, -4.43px);
-`;
-
-const FedcContainer = styled.div`
-  position: absolute;
-  top: 200px;
-  right: 50%;
-  transform: translateX(-22.5px);
-`;
-
 const Bar = styled.div`
   height: 100%;
   background: #594a9d;
@@ -135,17 +107,7 @@ export default () => (
       <Ticket />
     </Header>
     <Main>
-      <Cover>
-        <LogoContainer>
-          <Logo />
-        </LogoContainer>
-        <YearContainer>
-          <Year />
-        </YearContainer>
-        <FedcContainer>
-          <Fedc />
-        </FedcContainer>
-      </Cover>
+      <CoverLogo />
     </Main>
     <Foooter>
       <Bar />
