@@ -4,9 +4,7 @@ import styled from 'styled-components';
 import Burger from '../components/Burger';
 import CallForSpeakers from '../components/CallForSpeakers';
 import BuyTicket from '../components/BuyTicket';
-import Logo from '../components/Logo';
-import Year from '../components/Year';
-import Fedc from '../components/Fedc';
+import CoverLogo from '../components/CoverLogo';
 import Date from '../components/Date';
 import Location from '../components/Location';
 import Sponsor from '../components/Sponsor';
@@ -26,16 +24,16 @@ const Header = styled.div`
 `;
 
 const TopMenu = styled.div`
-	float: left;
-	display: flex;
-	width: 60%;
+  float: left;
+  display: flex;
+  width: 60%;
 `;
 
 const Menu = styled.div`
-	display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-	margin-left: 10px;
+  margin-left: 10px;
 `;
 
 const Main = styled.div`
@@ -46,7 +44,7 @@ const Main = styled.div`
 `;
 
 const Ticket = styled(BuyTicket)`
-	float: right;
+  float: right;
 `;
 
 const Foooter = styled.div`
@@ -62,32 +60,6 @@ const Buttons = styled.div`
   }
 `;
 
-const Cover = styled.div`
-  position: relative;
-  width: 400px;
-  height: 200px;
-  margin-top: -200px;
-`;
-
-const LogoContainer = styled.div`
-  width: 400px;
-  margin: 0 auto;
-`;
-
-const YearContainer = styled.div`
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translate(23.5px, -4.43px);
-`;
-
-const FedcContainer = styled.div`
-  position: absolute;
-  top: 200px;
-  right: 50%;
-  transform: translateX(-22.5px);
-`;
-
 const Bar = styled.div`
   height: 100%;
   background: #594a9d;
@@ -99,24 +71,24 @@ const Bar = styled.div`
 `;
 
 const MenuItem = styled.a`
-	display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-	height: 40px;
-	padding: 0 20px;
-	font-size: 24px;
-	color: #FFFFFF;
-	border-left: 2px solid #594A9D;
-	cursor: pointer;
-	text-decoration: none;
+  height: 40px;
+  padding: 0 20px;
+  font-size: 24px;
+  color: #FFFFFF;
+  border-left: 2px solid #594A9D;
+  cursor: pointer;
+  text-decoration: none;
 
-	&:hover {
-		color: #02F694;
-	}
+  &:hover {
+    color: #02F694;
+  }
 
-	&:first-child {
-		border: none;
-	}
+  &:first-child {
+    border: none;
+  }
 `;
 
 const renderSponsor =
@@ -125,27 +97,17 @@ const renderSponsor =
 export default () => (
   <Wrapper>
     <Header>
-			<TopMenu>
-				<Burger />
-				<Menu>
-					<MenuItem href="mailto:2018@fed.tw">Call For Sponsors</MenuItem>
-					<MenuItem href="mailto:2018@fed.tw">Call For Speakers</MenuItem>
-				</Menu>
-			</TopMenu>
+      <TopMenu>
+        <Burger />
+        <Menu>
+          <MenuItem href="mailto:2018@fed.tw">Call For Sponsors</MenuItem>
+          <MenuItem href="mailto:2018@fed.tw">Call For Speakers</MenuItem>
+        </Menu>
+      </TopMenu>
       <Ticket />
     </Header>
     <Main>
-      <Cover>
-        <LogoContainer>
-          <Logo />
-        </LogoContainer>
-        <YearContainer>
-          <Year />
-        </YearContainer>
-        <FedcContainer>
-          <Fedc />
-        </FedcContainer>
-      </Cover>
+      <CoverLogo />
     </Main>
     <Foooter>
       <Bar />
