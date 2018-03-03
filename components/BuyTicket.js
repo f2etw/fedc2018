@@ -12,18 +12,20 @@ export default styled(props => (
   color: #02f694;
   letter-spacing: 0.5px;
   text-align: left;
-  background-image: url('/static/btn_ticket_n.svg');
+  background-image: url('/static/btn_ticket_n.svg'), url('/static/btn_ticket_n.svg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100% 100%;
   width: 200px;
   height: 60px;
   padding-left: 56px;
+
   &:hover {
-    background-image: url('/static/btn_ticket_h.svg');
+    background-image: url('/static/btn_ticket_h.svg'), url('/static/btn_ticket_n.svg');
   }
+
   &:active {
-    background-image: url('/static/btn_ticket_p.svg');
+    background-image: url('/static/btn_ticket_p.svg'), url('/static/btn_ticket_n.svg');
     color: #321f6e;
   }
 `;
