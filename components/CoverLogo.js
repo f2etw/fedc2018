@@ -42,4 +42,8 @@ export default styled(CoverLogo)`
   ${Logo} {
     margin-top: 30px;
   }
+
+  @media (max-width: 480px) {
+    transform: scale(0.6);
+  }
 `;
