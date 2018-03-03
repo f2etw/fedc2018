@@ -1,38 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
 const Chinese = styled.div`
   font-family: STYuanti-TC-Bold;
-  font-size: 24px;
-  letter-spacing: 6.67px;
-  margin-bottom: 6px;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  letter-spacing: 0.45rem;
 `;
 
 const English = styled.div`
   font-family: Barlow;
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: 1.67px;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.1rem;
 `;
 
-const Location = ({ className }) => (
-  <div className={className}>
+const Location = () => (
+  <div>
     <Chinese>張榮發國際會議中心</Chinese>
     <English>Evergreen International Convention Center</English>
   </div>
 );
 
-Location.propTypes = {
-  className: PropTypes.string,
-};
-
-Location.defaultProps = {
-  className: '',
-};
-
-
-export default styled(Location)`
-  font-family: Barlow;
-  color: #02f694;
-`;
+export default Location;
