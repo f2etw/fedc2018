@@ -14,28 +14,21 @@ injectGlobal`
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet();
-    const page = renderPage(App => props =>
-      sheet.collectStyles(<App {...props} />));
-    const style = sheet.getStyleElement();
-    return { ...page, style };
+    const page = renderPage(App => props => sheet.collectStyles(<App {...props} />));
+    const styleTags = sheet.getStyleElement();
+    return { ...page, styleTags };
   }
 
   render() {
-		const { style } = this.props;
+    const { style } = this.props;
     return (
       <html lang="zh-TW">
         <Head>
           <title>FEDC</title>
           <meta charSet="utf-8" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <link href="/static/reset.css" rel="stylesheet" />
-          <link
-            href="https://fonts.googleapis.com/css?family=Barlow"
-            rel="stylesheet"
-          />
+          <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet" />
           {style}
         </Head>
         <body>

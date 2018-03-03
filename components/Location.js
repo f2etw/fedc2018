@@ -31,7 +31,6 @@ Location.defaultProps = {
   className: '',
 };
 
-
 export default styled(Location)`
   font-family: Barlow;
   color: #02f694;

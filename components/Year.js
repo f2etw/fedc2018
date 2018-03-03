@@ -2,9 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const Year = ({ className }) => (
-  <img className={className} src="/static/2018.svg" alt="" />
-);
+const Year = ({ className }) => <img className={className} src="/static/2018.svg" alt="" />;
 
 Year.propTypes = {
   className: PropTypes.string,
