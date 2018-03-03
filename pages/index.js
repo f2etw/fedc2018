@@ -2,7 +2,6 @@ import fp from 'lodash/fp';
 import React from 'react';
 import styled from 'styled-components';
 import Burger from '../components/Burger';
-import CallForSpeakers from '../components/CallForSpeakers';
 import BuyTicket from '../components/BuyTicket';
 import Logo from '../components/Logo';
 import Year from '../components/Year';
@@ -54,12 +53,6 @@ const Foooter = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
-
-const Buttons = styled.div`
-  & > *:not(:last-child) {
-    margin-right: 20px;
-  }
 `;
 
 const Cover = styled.div`
