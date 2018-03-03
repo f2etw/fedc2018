@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1323px" height="574px" viewBox="0 0 1323 574" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>bg_00</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-2.0%" y="-5.3%" width="103.9%" height="110.7%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="5" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-3.0%" y="-5.3%" width="106.0%" height="110.7%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="5" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="fedc_web_bg" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-120.000000, -225.000000)">
+        <g id="bg_00" transform="translate(100.000000, 206.000000)" stroke-width="5">
+            <rect id="Rectangle-2-Copy" stroke="#594A9D" opacity="0.699999988" filter="url(#filter-1)" transform="translate(404.000000, 378.500000) rotate(-15.000000) translate(-404.000000, -378.500000) " x="26.5" y="240.5" width="755" height="276" rx="138"></rect>
+            <rect id="Rectangle-2-Copy-2" stroke="#02F694" opacity="0.300000012" filter="url(#filter-2)" transform="translate(1084.845532, 200.417340) rotate(-15.000000) translate(-1084.845532, -200.417340) " x="837.345532" y="62.4173399" width="495" height="276" rx="138"></rect>
+        </g>
+    </g>
+</svg>
