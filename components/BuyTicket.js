@@ -1,14 +1,36 @@
 import React, { PureComponent } from 'react';
+import styled from 'styled-components';
+
+const BuyTicketLink = styled.a`
+  --fill: #02F694;
+
+  fill: var(--fill);
+  fill-opacity: 0;
+  stroke: var(--fill);
+  stroke-width: 3;
+
+  &:hover {
+    fill-opacity: 0.2;
+  }
+
+  &:active {
+    fill-opacity: 1;
+
+    & line {
+      stroke: #321f6e;
+    }
+  }
+`;
 
 class BuyTicket extends PureComponent {
   render() {
     return (
-      <svg width="12.5rem" height="4rem" viewBox="0 0 204 64" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M3.5 42.394V57A3.5 3.5 0 0 0 7 60.5h190a3.5 3.5 0 0 0 3.5-3.5V7a3.5 3.5 0 0 0-3.5-3.5H7A3.5 3.5 0 0 0 3.5 7v14.606c5.088.728 9 5.104 9 10.394s-3.912 9.666-9 10.394zM2 39.5a7.5 7.5 0 0 0 0-15A1.5 1.5 0 0 1 .5 23V7A6.5 6.5 0 0 1 7 .5h190a6.5 6.5 0 0 1 6.5 6.5v50a6.5 6.5 0 0 1-6.5 6.5H7A6.5 6.5 0 0 1 .5 57V41A1.5 1.5 0 0 1 2 39.5zM30.5 1A1.5 1.5 0 0 1 32 2.5v4a1.5 1.5 0 0 1-3 0v-4A1.5 1.5 0 0 1 30.5 1zm0 11a1.5 1.5 0 0 1 1.5 1.5v4a1.5 1.5 0 0 1-3 0v-4a1.5 1.5 0 0 1 1.5-1.5zm0 11a1.5 1.5 0 0 1 1.5 1.5v4a1.5 1.5 0 0 1-3 0v-4a1.5 1.5 0 0 1 1.5-1.5zm0 11a1.5 1.5 0 0 1 1.5 1.5v4a1.5 1.5 0 0 1-3 0v-4a1.5 1.5 0 0 1 1.5-1.5zm0 11a1.5 1.5 0 0 1 1.5 1.5v4a1.5 1.5 0 0 1-3 0v-4a1.5 1.5 0 0 1 1.5-1.5zm0 11a1.5 1.5 0 0 1 1.5 1.5v4a1.5 1.5 0 0 1-3 0v-4a1.5 1.5 0 0 1 1.5-1.5z"
-          fill="#02F694"
-        />
-      </svg>
+      <BuyTicketLink>
+        <svg width="200px" height="60px" viewBox="0 0 204 64" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 40a9 9 0 0 0 0-18V6a5 5 0 0 1 5-5h190a5 5 0 0 1 5 5v50a5 5 0 0 1-5 5H5a5 5 0 0 1-5-5V40z" stroke-linejoin="round" />
+          <line x1="27" y1="1" x2="27" y2="61" stroke-dasharray="5, 6" />
+        </svg>
+      </BuyTicketLink>
     );
   }
 }
