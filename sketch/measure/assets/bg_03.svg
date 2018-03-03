@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="620px" height="248px" viewBox="0 0 620 248" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>bg_03</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-27.9%" y="-35.6%" width="155.7%" height="171.1%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="10" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="fedc_web_bg" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-324.000000, -476.000000)">
+        <g id="bg_03" transform="translate(646.000000, 587.500000) rotate(-180.000000) translate(-646.000000, -587.500000) translate(339.000000, 467.000000)">
+            <rect id="Rectangle-2-Copy" stroke="#02F694" stroke-width="3" opacity="0.300000012" transform="translate(229.760737, 141.524365) rotate(-15.000000) translate(-229.760737, -141.524365) " x="5.16623506" y="100.854091" width="449.189003" height="81.3405483" rx="40.6702742"></rect>
+            <rect id="Rectangle-2-Copy-2" fill="#02F694" opacity="0.699999988" filter="url(#filter-1)" transform="translate(551.016795, 54.676149) rotate(-15.000000) translate(-551.016795, -54.676149) " x="497.195877" y="12.5058748" width="107.641836" height="84.3405483" rx="42.1702742"></rect>
+        </g>
+    </g>
+</svg>
