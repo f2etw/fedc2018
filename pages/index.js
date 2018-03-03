@@ -1,15 +1,12 @@
 import fp from 'lodash/fp';
-
 import React from 'react';
 import styled from 'styled-components';
 import Burger from '../components/Burger';
 import CallForSpeakers from '../components/CallForSpeakers';
 import BuyTicket from '../components/BuyTicket';
-
 import Logo from '../components/Logo';
 import Year from '../components/Year';
 import Fedc from '../components/Fedc';
-
 import Date from '../components/Date';
 import Location from '../components/Location';
 import Sponsor from '../components/Sponsor';
@@ -26,8 +23,19 @@ const Wrapper = styled.div`
 `;
 
 const Header = styled.div`
-  display: flex;
-  justify-content: space-between;
+`;
+
+const TopMenu = styled.div`
+	float: left;
+	display: flex;
+	width: 60%;
+`;
+
+const Menu = styled.div`
+	display: flex;
+  justify-content: center;
+  align-items: center;
+	margin-left: 10px;
 `;
 
 const Main = styled.div`
@@ -35,6 +43,10 @@ const Main = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+const Ticket = styled(BuyTicket)`
+	float: right;
 `;
 
 const Foooter = styled.div`
@@ -86,17 +98,41 @@ const Bar = styled.div`
   margin-right: 20px;
 `;
 
+const MenuItem = styled.a`
+	display: flex;
+  justify-content: center;
+  align-items: center;
+	height: 40px;
+	padding: 0 20px;
+	font-size: 24px;
+	color: #FFFFFF;
+	border-left: 2px solid #594A9D;
+	cursor: pointer;
+	text-decoration: none;
+
+	&:hover {
+		color: #02F694;
+	}
+
+	&:first-child {
+		border: none;
+	}
+`;
+
 const renderSponsor =
   fp.map(src => <Sponsor src={`/static/icon/${src}`} key={src} />);
 
 export default () => (
   <Wrapper>
     <Header>
-      <Burger href="menu" />
-      <Buttons>
-        <CallForSpeakers />
-        <BuyTicket />
-      </Buttons>
+			<TopMenu>
+				<Burger />
+				<Menu>
+					<MenuItem href="mailto:2018@fed.tw">Call For Sponsors</MenuItem>
+					<MenuItem href="mailto:2018@fed.tw">Call For Speakers</MenuItem>
+				</Menu>
+			</TopMenu>
+      <Ticket />
     </Header>
     <Main>
       <Cover>

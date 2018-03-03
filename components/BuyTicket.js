@@ -1,23 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
-const BuyTicket = ({ className }) => (
-  <button className={className}>
+export default styled(props => (
+  <button {...props}>
     <span>Buy Ticket</span>
   </button>
-);
-
-
-BuyTicket.propTypes = {
-  className: PropTypes.string,
-};
-
-BuyTicket.defaultProps = {
-  className: '',
-};
-
-export default styled(BuyTicket)`
+))`
   font-family: Barlow;
   font-weight: 500;
   font-size: 24px;
