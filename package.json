@@ -23,7 +23,7 @@
     "react-dom": "^16.2.0",
     "rxjs": "^5.5.6",
     "styled-components": "^2.4.0",
-    "the-oa": "^0.1.1"
+    "the-oa": "^0.2.0"
   },
   "devDependencies": {
     "eslint": "^4.9.0",
