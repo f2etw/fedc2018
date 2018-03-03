@@ -26,16 +26,16 @@ const Header = styled.div`
 `;
 
 const TopMenu = styled.div`
-	float: left;
-	display: flex;
-	width: 60%;
+  float: left;
+  display: flex;
+  width: 60%;
 `;
 
 const Menu = styled.div`
-	display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-	margin-left: 10px;
+  margin-left: 10px;
 `;
 
 const Main = styled.div`
@@ -46,7 +46,7 @@ const Main = styled.div`
 `;
 
 const Ticket = styled(BuyTicket)`
-	float: right;
+  float: right;
 `;
 
 const Foooter = styled.div`
@@ -99,24 +99,24 @@ const Bar = styled.div`
 `;
 
 const MenuItem = styled.a`
-	display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-	height: 40px;
-	padding: 0 20px;
-	font-size: 24px;
-	color: #FFFFFF;
-	border-left: 2px solid #594A9D;
-	cursor: pointer;
-	text-decoration: none;
+  height: 40px;
+  padding: 0 20px;
+  font-size: 24px;
+  color: #FFFFFF;
+  border-left: 2px solid #594A9D;
+  cursor: pointer;
+  text-decoration: none;
 
-	&:hover {
-		color: #02F694;
-	}
+  &:hover {
+    color: #02F694;
+  }
 
-	&:first-child {
-		border: none;
-	}
+  &:first-child {
+    border: none;
+  }
 `;
 
 const renderSponsor =
@@ -125,13 +125,13 @@ const renderSponsor =
 export default () => (
   <Wrapper>
     <Header>
-			<TopMenu>
-				<Burger />
-				<Menu>
-					<MenuItem href="mailto:2018@fed.tw">Call For Sponsors</MenuItem>
-					<MenuItem href="mailto:2018@fed.tw">Call For Speakers</MenuItem>
-				</Menu>
-			</TopMenu>
+      <TopMenu>
+        <Burger />
+        <Menu>
+          <MenuItem href="mailto:2018@fed.tw">Call For Sponsors</MenuItem>
+          <MenuItem href="mailto:2018@fed.tw">Call For Speakers</MenuItem>
+        </Menu>
+      </TopMenu>
       <Ticket />
     </Header>
     <Main>
