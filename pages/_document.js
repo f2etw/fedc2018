@@ -11,7 +11,7 @@ export default class MyDocument extends Document {
   }
 
   render() {
-    const { style } = this.props;
+    const { styleTags } = this.props;
     return (
       <html lang="zh-TW">
         <Head>
@@ -20,7 +20,7 @@ export default class MyDocument extends Document {
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <link href="/static/reset.css" rel="stylesheet" />
           <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet" />
-          {style}
+          {styleTags}
         </Head>
         <body>
           <Main />
