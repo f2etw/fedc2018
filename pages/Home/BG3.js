@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 class BG3 extends PureComponent {
   render() {
     return (
-      <svg width="38.75rem" height="15.5rem" viewBox="0 0 620 248" xmlns="http://www.w3.org/2000/svg">
+      <svg width="387" height="155" viewBox="0 0 620 248" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <filter
             x="-27.9%"
