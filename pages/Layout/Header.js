@@ -47,7 +47,7 @@ class Header extends PureComponent {
     return (
       <Content>
         <TopMenu>
-          <Burger />
+          <Burger size={25}/>
           <Menu>
             <MenuItem href="mailto:2018@fed.tw">Call For Sponsors</MenuItem>
             <MenuItem href="mailto:2018@fed.tw">Call For Speakers</MenuItem>

@@ -4,8 +4,8 @@ class BG0 extends PureComponent {
   render() {
     return (
       <svg
-        width="83rem"
-        height="36rem"
+        width="830"
+        height="360"
         viewBox="0 0 1323 574"
         xmlns="http://www.w3.org/2000/svg"
       >
