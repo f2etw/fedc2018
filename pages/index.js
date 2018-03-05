@@ -9,8 +9,8 @@ import Footer from './Home/Footer';
 // eslint-disable-next-line no-unused-expressions
 injectGlobal`
   html {
-    font-size: 10px;
-    font-family: 'Barlow', sans-serif;    
+    font-size: 16px;
+    font-family: 'Barlow', sans-serif;
     color: #02f694;
   }
 `;

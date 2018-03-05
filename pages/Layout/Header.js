@@ -27,6 +27,7 @@ const Menu = styled.div`
 const MenuItem = styled.a`
   line-height: 1.8rem;
   font-size: 1.5rem;
+  font-weight: 400;
   color: #02f694;
   border-left: 2px solid #594a9d;
   padding: 0 1.25rem;
