@@ -24,7 +24,6 @@ const BuyTicketLink = styled.a`
 
   .text {
     font-size: 24px;
-    font-weight: bolder;
     letter-spacing: 1px;
     alignment-baseline: middle;
   }
