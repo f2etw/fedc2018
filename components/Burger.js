@@ -41,7 +41,7 @@ Burger.propTypes = {
 };
 
 Burger.defaultProps = {
-  size: '2.5rem',
+  size: '25',
 };
 
 export default Burger;

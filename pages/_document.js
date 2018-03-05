@@ -19,7 +19,7 @@ export default class MyDocument extends Document {
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <link href="/static/reset.css" rel="stylesheet" />
-          <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Barlow:400,500,700" rel="stylesheet" />
           {styleTags}
         </Head>
         <body>
