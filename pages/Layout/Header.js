@@ -4,13 +4,16 @@ import Burger from '../../components/Burger';
 import BuyTicket from '../../components/BuyTicket';
 
 const Content = styled.div`
-  position: fixed;
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 5rem;
   padding: 0 2.5rem;
-  margin-top: 2.5rem;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    padding: 0 1.25rem;
+  }
 `;
 
 const TopMenu = styled.div`

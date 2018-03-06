@@ -24,8 +24,12 @@ const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10rem;
-  overflow: hidden;
+  margin-top: 2rem;
+
+  @media (max-width: 768px) {
+    min-height: 500px;
+    overflow: hidden;
+  }
 `;
 
 const LogoContainer = styled.div`
