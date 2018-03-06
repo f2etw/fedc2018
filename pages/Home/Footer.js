@@ -5,10 +5,9 @@ import Location from '../../components/Location';
 
 const Foooter = styled.div`
   display: flex;
-  height: 6.25rem;
   justify-content: flex-start;
   align-items: center;
-  margin: 0 0 2.5rem 5.25rem;
+  padding: 0 5.25rem 2.5rem;
 `;
 
 const FooterItem = styled.div`
