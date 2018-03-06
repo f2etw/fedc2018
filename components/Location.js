@@ -4,15 +4,14 @@ import styled from 'styled-components';
 const Chinese = styled.div`
   font-family: STYuanti-TC-Bold;
   font-size: 1.5rem;
-  line-height: 2rem;
   letter-spacing: 0.45rem;
 `;
 
 const English = styled.div`
   font-family: Barlow;
   font-size: 1.25rem;
-  line-height: 1.5rem;
   letter-spacing: 0.1rem;
+  margin-top: 0.5rem;
 `;
 
 const Location = () => (
