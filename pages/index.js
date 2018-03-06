@@ -4,6 +4,7 @@ import { injectGlobal } from 'styled-components';
 import Wrapper from './Layout/Wrapper';
 import Header from './Layout/Header';
 import Main from './Home/Main';
+import MainButtons from './Home/MainButtons';
 import Footer from './Home/Footer';
 
 // eslint-disable-next-line no-unused-expressions
@@ -23,6 +24,7 @@ export default () => (
   <Wrapper>
     <Header />
     <Main />
+    <MainButtons />
     <Footer />
   </Wrapper>
 );

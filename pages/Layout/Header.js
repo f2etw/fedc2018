@@ -16,47 +16,12 @@ const Content = styled.div`
   }
 `;
 
-const TopMenu = styled.div`
-  display: flex;
-`;
-
-const Menu = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 10px;
-`;
-
-const MenuItem = styled.a`
-  line-height: 1.8rem;
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #02f694;
-  border-left: 2px solid #594a9d;
-  padding: 0 1.25rem;
-  cursor: pointer;
-  text-decoration: none;
-
-  &:hover {
-    color: #ffffff;
-  }
-
-  &:first-child {
-    border: none;
-  }
-`;
 
 class Header extends PureComponent {
   render() {
     return (
       <Content>
-        <TopMenu>
-          <Burger />
-          <Menu>
-            <MenuItem href="mailto:2018@fed.tw">Call For Sponsors</MenuItem>
-            <MenuItem href="mailto:2018@fed.tw">Call For Speakers</MenuItem>
-          </Menu>
-        </TopMenu>
+        <Burger />
         <BuyTicket />
       </Content>
     );
