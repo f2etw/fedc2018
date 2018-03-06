@@ -13,6 +13,11 @@ injectGlobal`
     font-family: 'Barlow', sans-serif;
     color: #02f694;
   }
+
+  html,
+  body {
+    background-color: #311e6d;
+  }
 `;
 
 export default () => (
