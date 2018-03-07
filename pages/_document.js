@@ -18,6 +18,7 @@ export default class MyDocument extends Document {
           <title>FEDC</title>
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
           <link href="/static/reset.css" rel="stylesheet" />
           <link href="https://fonts.googleapis.com/css?family=Barlow:400,500,700" rel="stylesheet" />
           {styleTags}
