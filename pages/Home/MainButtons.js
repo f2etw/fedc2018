@@ -2,18 +2,12 @@ import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 
 const Content = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  /* Aligns to header */
-  position: absolute;
-  top: 0;
-  left: 5rem;
-  height: 5rem;
+  display: none;
 
   @media (max-width: 768px) {
-    position: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: auto;
     flex-direction: column;
     margin-bottom: 3.125rem;
@@ -36,7 +30,6 @@ const ButtonLink = styled.a`
   &:active {
     color: #02f694;
   }
-
 
   & + & {
     border-left: 2px solid #594a9d;
