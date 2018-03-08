@@ -18,7 +18,7 @@ const BlackObfuscator = styled.div`
 const Wrapper = styled.div`
   padding-top: 10rem;
   padding-bottom: 12rem;
-  display: ${({ isDisplay }) => (isDisplay ? 'flex' : 'none')};
+  display: ${({ visible }) => (visible ? 'flex' : 'none')};
   flex-direction: column;
   
   position: fixed;
@@ -163,9 +163,9 @@ class Menu extends PureComponent {
   );
 
   render() {
-    const { isDisplay, items } = this.props;
+    const { visible, items } = this.props;
     return (
-      <Wrapper isDisplay={isDisplay}>
+      <Wrapper visible={visible}>
         <BlackObfuscator />
         <LogoContaienr>
           <Logo width="6.86rem" height="3.57rem" />
@@ -200,7 +200,7 @@ class Menu extends PureComponent {
 }
 
 Menu.propTypes = {
-  isDisplay: PropTypes.bool,
+  visible: PropTypes.bool,
   items: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string,
     href: PropTypes.string,
@@ -209,7 +209,7 @@ Menu.propTypes = {
 };
 
 Menu.defaultProps = {
-  isDisplay: false,
+  visible: false,
   items: [],
 };
 

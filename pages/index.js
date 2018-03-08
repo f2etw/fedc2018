@@ -32,7 +32,7 @@ injectGlobal`
 class Index extends PureComponent {
   state = {
     menu: {
-      isDisplay: false,
+      visible: false,
       items: [
         { name: 'HOME', href: '/', active: true },
         { name: 'AGENDA', href: '/', active: false },
@@ -44,7 +44,7 @@ class Index extends PureComponent {
   toggleMenu = () => {
     const { menu } = this.state;
     this.setState({
-      menu: defaults({ isDisplay: !menu.isDisplay }, menu),
+      menu: defaults({ visible: !menu.visible }, menu),
     });
   }
 
@@ -54,8 +54,8 @@ class Index extends PureComponent {
 
     return (
       <Wrapper>
-        <Header toggleMenu={toggleMenu} menuIsDisplay={menu.isDisplay} />
-        <BlurFilter active={menu.isDisplay}>
+        <Header toggleMenu={toggleMenu} menuVisible={menu.visible} />
+        <BlurFilter active={menu.visible}>
           <Main />
           <MainButtons />
           <Footer />

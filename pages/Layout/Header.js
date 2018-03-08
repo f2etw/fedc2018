@@ -14,7 +14,7 @@ const Content = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 2rem 2.5rem;
-  background-color: ${({ menuIsDisplay }) => (menuIsDisplay ? 'transparent' : 'rgba(49, 30, 108, 0.9)')};
+  background-color: ${({ menuVisible }) => (menuVisible ? 'transparent' : 'rgba(49, 30, 108, 0.9)')};
   overflow: hidden;
   z-index: 20;
 
@@ -59,11 +59,11 @@ const MenuItem = styled.a`
 
 class Header extends PureComponent {
   render() {
-    const { toggleMenu, menuIsDisplay } = this.props;
-    const WhichBurger = menuIsDisplay ? BurgetClose : Burger;
+    const { toggleMenu, menuVisible } = this.props;
+    const WhichBurger = menuVisible ? BurgetClose : Burger;
 
     return (
-      <Content menuIsDisplay={menuIsDisplay}>
+      <Content menuVisible={menuVisible}>
         <TopMenu>
           <WhichBurger onClick={toggleMenu} />
           <Menu>
@@ -79,12 +79,12 @@ class Header extends PureComponent {
 
 Header.propTypes = {
   toggleMenu: PropTypes.func,
-  menuIsDisplay: PropTypes.bool,
+  menuVisible: PropTypes.bool,
 };
 
 Header.defaultProps = {
   toggleMenu: x => x,
-  menuIsDisplay: false,
+  menuVisible: false,
 };
 
 export default Header;
