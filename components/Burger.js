@@ -1,8 +1,14 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import styled from 'styled-components';
 
-const Burger = ({ size }) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 40 40">
+const Svg = styled.svg`
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+`;
+
+const Burger = props => (
+  <Svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" {...props}>
     <g fill="none" fillRule="evenodd">
       <rect
         width="36"
@@ -33,15 +39,7 @@ const Burger = ({ size }) => (
         transform="rotate(-15 20.1631 33)"
       />
     </g>
-  </svg>
+  </Svg>
 );
-
-Burger.propTypes = {
-  size: PropTypes.string,
-};
-
-Burger.defaultProps = {
-  size: '25',
-};
 
 export default Burger;

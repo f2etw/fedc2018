@@ -1,6 +1,9 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
+
 import Burger from '../../components/Burger';
+import BurgetClose from '../../components/BugerClose';
 import BuyTicket from '../../components/BuyTicket';
 
 const Content = styled.div`
@@ -11,7 +14,7 @@ const Content = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 2rem 2.5rem;
-  background-color: rgba(49, 30, 108, 0.9);
+  background-color: ${({ menuVisible }) => (menuVisible ? 'transparent' : 'rgba(49, 30, 108, 0.9)')};
   overflow: hidden;
   z-index: 20;
 
@@ -56,10 +59,13 @@ const MenuItem = styled.a`
 
 class Header extends PureComponent {
   render() {
+    const { toggleMenu, menuVisible } = this.props;
+    const WhichBurger = menuVisible ? BurgetClose : Burger;
+
     return (
-      <Content>
+      <Content menuVisible={menuVisible}>
         <TopMenu>
-          <Burger />
+          <WhichBurger onClick={toggleMenu} />
           <Menu>
             <MenuItem href="mailto:2018@fed.tw">Call For Sponsors</MenuItem>
             <MenuItem href="mailto:2018@fed.tw">Call For Speakers</MenuItem>
@@ -70,5 +76,15 @@ class Header extends PureComponent {
     );
   }
 }
+
+Header.propTypes = {
+  toggleMenu: PropTypes.func,
+  menuVisible: PropTypes.bool,
+};
+
+Header.defaultProps = {
+  toggleMenu: x => x,
+  menuVisible: false,
+};
 
 export default Header;
