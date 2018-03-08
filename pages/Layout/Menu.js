@@ -56,12 +56,13 @@ const Content = styled.div`
   @media (max-width: 768px){
     margin-top: 0rem;
     flex-direction: column;
+    align-items: center;
   }
 `;
 
 const Start = styled.div`
   max-width: 35rem;
-  flex-basis: 50%;
+  width: 50%;
   border-right: #594A9D 0.1rem solid;
 
   display: flex;
@@ -70,6 +71,7 @@ const Start = styled.div`
 
   @media (max-width: 768px){
     border-right: none;
+    width: 100%;
   }
 `;
 
@@ -112,7 +114,7 @@ const MenuItem = styled.a`
 
 const End = styled.div`
   max-width: 35rem;
-  flex-basis: 50%;
+  width: 50%;
   border-left: #594A9D 0.1rem solid;
 
   display: flex;
@@ -122,6 +124,7 @@ const End = styled.div`
   @media (max-width: 768px){
     border-left: none;
     border-top: #594A9D 0.1rem solid;    
+    width: 100%;    
   }
 `;
 
@@ -138,7 +141,6 @@ const FacebookIconContainer = styled.div`
     transform: none;
     margin-top: 6em;
     margin-bottom: 6em;
-    align-self: center;           
   }
 `;
 
