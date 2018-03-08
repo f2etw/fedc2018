@@ -15,7 +15,7 @@ export default class MyDocument extends Document {
     return (
       <html lang="zh-TW">
         <Head>
-          <title>FEDC</title>
+          <title>FEDC 2018</title>
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
           <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
