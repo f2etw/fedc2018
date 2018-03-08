@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import { injectGlobal } from 'styled-components';
-import { defaults } from 'lodash';
 
 import Wrapper from './Layout/Wrapper';
 import Header from './Layout/Header';
@@ -44,7 +43,10 @@ class Index extends PureComponent {
   toggleMenu = () => {
     const { menu } = this.state;
     this.setState({
-      menu: defaults({ visible: !menu.visible }, menu),
+      menu: {
+        ...menu,
+        visible: !menu.visible,
+      },
     });
   }
 
