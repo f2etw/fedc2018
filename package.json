@@ -8,7 +8,7 @@
     "build": "next build && next export",
     "start": "next start",
     "lint": "eslint ./components ./pages ./static",
-    "deploy": "next build && next export && touch out/.nojekyll && cp CNAME out/ && git add out/ && git commit -m \"Deploy Next.js to gh-pages\" && git subtree push --prefix out origin gh-pages && rm -rf out"
+    "deploy": "next build && next export && touch out/.nojekyll && cp CNAME out/ && git add out/ && git commit -m \"Deploy Next.js to gh-pages\" && git push origin `git subtree split --prefix out master`:gh-pages --force && git reset --hard HEAD~1"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
