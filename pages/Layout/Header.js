@@ -71,7 +71,11 @@ class Header extends PureComponent {
             <MenuItem href="mailto:2018@fed.tw">Call For Speakers</MenuItem>
           </Menu>
         </TopMenu>
-        <BuyTicket />
+        <BuyTicket
+          href="https://f2e.kktix.cc/events/fedc-2018"
+          target="_blank"
+          rel="noopener noreferrer"
+        />
       </Content>
     );
   }
