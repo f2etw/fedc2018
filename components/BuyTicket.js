@@ -59,7 +59,7 @@ class BuyTicket extends PureComponent {
             y="32"
             fontSize="24"
             letterSpacing="1"
-            alignmentBaseline="middle"
+            dominantBaseline="middle"
           >
             Buy Ticket
           </Text>
