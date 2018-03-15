@@ -170,7 +170,7 @@ class Menu extends PureComponent {
       <Wrapper visible={visible}>
         <BlackObfuscator />
         <LogoContaienr>
-          <Logo width="6.86rem" height="3.57rem" />
+          <Logo width="6.86em" height="3.57em" />
         </LogoContaienr>
         <Content>
           <Start>
