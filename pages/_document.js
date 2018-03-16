@@ -1,6 +1,23 @@
 import React from 'react';
 import Document, { Head, Main, NextScript } from 'next/document';
-import { ServerStyleSheet } from 'styled-components';
+import { ServerStyleSheet, injectGlobal } from 'styled-components';
+
+// eslint-disable-next-line no-unused-expressions
+injectGlobal`
+  html {
+    font-size: 16px;
+    font-family: 'Barlow', sans-serif;
+    color: #02f694;
+
+    @media (max-width: 1440px) {
+      font-size: 10px;
+    }
+  }
+
+  body {
+    background-color: #311e6d;
+  }
+`;
 
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {

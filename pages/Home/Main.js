@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import PropType from 'prop-types';
 import { tween, easing } from 'the-oa';
 import { fromEvent } from 'rxjs/observable/fromEvent';
 import { tap } from 'rxjs/operators/tap';
@@ -7,9 +8,6 @@ import { switchMap } from 'rxjs/operators/switchMap';
 import { Scheduler } from 'rxjs';
 import { map } from 'rxjs/operators/map';
 import styled from 'styled-components';
-import FEDC from '../../components/Fedc';
-import Logo from '../../components/Logo';
-import YearIcon from '../../components/YearIcon';
 import BG0 from './BG0';
 import BG1 from './BG1';
 import BG2 from './BG2';
@@ -25,31 +23,11 @@ const Content = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 8rem;
-  overflow: hidden;  
+  overflow: hidden;
 
   @media (max-width: 768px) {
     min-height: 500px;
   }
-`;
-
-const LogoContainer = styled.div`
-  position: absolute;
-  top: 4.25rem;
-  z-index: 10;
-`;
-
-const YearContainer = styled.div`
-  position: absolute;
-  top: 1.3rem;
-  margin-left: 50px;
-  z-index: 10;
-`;
-
-const FedcContainer = styled.div`
-  position: absolute;
-  top: 17rem;
-  margin-left: -50px;
-  z-index: 10;
 `;
 
 const BG0Container = styled.div`
@@ -101,6 +79,14 @@ const BG6Container = styled.div`
 `;
 
 class Main extends PureComponent {
+  static propTypes = {
+    children: PropType.node,
+  }
+
+  static defaultProps = {
+    children: null,
+  }
+
   componentDidMount() {
     const mouseMove = fromEvent(this.containerDOM, 'mousemove');
     // const mouseEnter = fromEvent(this.containerDOM, 'mouseenter');
@@ -116,9 +102,9 @@ class Main extends PureComponent {
     });
 
     const animeDOM = ({ leftP, topP }) => {
-      this.logoDOM.style.transform = `translate3d(${leftP * 100}px, ${topP * 50}px, 0)`;
-      this.yearDOM.style.transform = `translate3d(${-leftP * 20}px, ${topP * 20}px, 0)`;
-      this.fedcDOM.style.transform = `translate3d(${leftP * 50}px, ${topP * 50}px, 0)`;
+      // this.logoDOM.style.transform = `translate3d(${leftP * 100}px, ${topP * 50}px, 0)`;
+      // this.yearDOM.style.transform = `translate3d(${-leftP * 20}px, ${topP * 20}px, 0)`;
+      // this.fedcDOM.style.transform = `translate3d(${leftP * 50}px, ${topP * 50}px, 0)`;
       this.bg0.style.transform = `translate3d(${leftP * 5}px, ${topP * 5}px, 0)`;
       this.bg1.style.transform = `translate3d(${leftP * 5}px, ${topP * 5}px, 0)`;
       this.bg2.style.transform = `translate3d(${leftP * 5}px, ${-topP * 5}px, 0)`;
@@ -147,33 +133,15 @@ class Main extends PureComponent {
   }
 
   render() {
+    const { children } = this.props;
+
     return (
       <Content
         innerRef={(DOM) => {
           this.containerDOM = DOM;
         }}
       >
-        <LogoContainer
-          innerRef={(DOM) => {
-            this.logoDOM = DOM;
-          }}
-        >
-          <Logo />
-        </LogoContainer>
-        <YearContainer
-          innerRef={(DOM) => {
-            this.yearDOM = DOM;
-          }}
-        >
-          <YearIcon />
-        </YearContainer>
-        <FedcContainer
-          innerRef={(DOM) => {
-            this.fedcDOM = DOM;
-          }}
-        >
-          <FEDC />
-        </FedcContainer>
+        {children}
         <BG0Container
           innerRef={(DOM) => {
             this.bg0 = DOM;
