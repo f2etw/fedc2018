@@ -1,6 +1,8 @@
 module.exports = {
   exportPathMap: () => ({
     '/': { page: '/' },
+    '/agenda': { page: '/agenda' },
+    '/speackers': { page: '/speackers' },
   }),
   webpack: (config) => {
     // Fixes npm packages that depend on `fs` module
