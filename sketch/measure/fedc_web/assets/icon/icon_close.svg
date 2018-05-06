@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/icon_close</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="20" width="18" height="6" rx="3"></rect>
+        <rect id="path-2" x="0" y="20" width="46" height="6" rx="3"></rect>
+    </defs>
+    <g id="icon/icon_close" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(20.000000, 20.000000) rotate(-45.000000) translate(-20.000000, -20.000000) translate(-3.000000, -3.000000)">
+            <g id="Rectangle-3-Copy-3">
+                <use fill="#02F694" fill-rule="evenodd" xlink:href="#path-1"></use>
+                <rect stroke="#02F694" stroke-width="2" x="1" y="21" width="16" height="4" rx="2"></rect>
+            </g>
+            <rect id="Rectangle-3-Copy-5" stroke="#02F694" stroke-width="2" x="29" y="20" width="16" height="6" rx="3"></rect>
+            <g id="Rectangle-3-Copy-4" transform="translate(23.000000, 23.000000) rotate(-270.000000) translate(-23.000000, -23.000000) ">
+                <use fill="#02F694" fill-rule="evenodd" xlink:href="#path-2"></use>
+                <rect stroke="#02F694" stroke-width="2" x="1" y="21" width="44" height="4" rx="2"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
