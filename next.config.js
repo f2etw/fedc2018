@@ -3,6 +3,7 @@ module.exports = {
     '/': { page: '/' },
     '/agenda': { page: '/agenda' },
     '/speakers': { page: '/speakers' },
+    '/about': { page: '/about' },
   }),
   webpack: (config) => {
     // Fixes npm packages that depend on `fs` module

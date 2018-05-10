@@ -172,6 +172,7 @@ export default class Menu extends PureComponent {
     visible: false,
     items: [
       { name: 'HOME', href: '/' },
+      { name: 'ABOUT', href: '/about' },
       { name: 'AGENDA', href: '/agenda' },
       { name: 'SPEAKERS', href: '/speakers' },
     ],
