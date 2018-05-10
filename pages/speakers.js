@@ -1,56 +1,14 @@
 import React, { PureComponent } from 'react';
-import Wrapper from './Layout/Wrapper';
-import Header from './Layout/Header';
-import Main from './Home/Main';
-import MainButtons from './Home/MainButtons';
-import Footer from './Home/Footer';
-import Menu from './Layout/Menu';
-import BlurFilter from './Layout/BlurFilter';
+import withMenu from './Layout/withMenu';
+import withBackground from './Layout/withBackground';
 
-class Index extends PureComponent {
-  state = {
-    menu: {
-      visible: false,
-      items: [
-        { name: 'HOME', href: '/', active: true },
-        { name: 'AGENDA', href: '/agenda', active: false },
-        { name: 'SPEAKERS', href: '/speakers', active: false },
-      ],
-    },
-  }
 
-  toggleMenu = () => {
-    const { menu } = this.state;
-    this.setState({
-      menu: {
-        ...menu,
-        visible: !menu.visible,
-      },
-    });
-  }
-
+class Speaker extends PureComponent {
   render() {
-    const { toggleMenu } = this;
-    const { menu } = this.state;
-
     return (
-      <Wrapper>
-        <Header toggleMenu={toggleMenu} menuVisible={menu.visible} />
-        <BlurFilter active={menu.visible}>
-          <Main>
-            Developer Program
-            Designer Program
-            Pitch Space
-            Developer Workshops
-            Designer Workshops
-          </Main>
-          <MainButtons />
-          <Footer />
-        </BlurFilter>
-        <Menu {...menu} />
-      </Wrapper>
+      <div />
     );
   }
 }
 
-export default Index;
+export default withMenu(withBackground(Speaker));

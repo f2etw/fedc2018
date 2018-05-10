@@ -10,7 +10,7 @@ injectGlobal`
     color: #02f694;
 
     @media (max-width: 1440px) {
-      font-size: 10px;
+      /* font-size: 10px; */
     }
   }
 

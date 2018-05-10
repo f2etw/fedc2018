@@ -36,7 +36,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const LogoContaienr = styled.div`
+const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -105,7 +105,7 @@ const MenuItem = styled.a`
   }
 
   @media (max-width: 768px){
-    font-size: 3rem;
+    font-size: 2rem;
     &:not(:first-child){
       margin-top: 1.8em;
     }
@@ -157,21 +157,45 @@ const OurSponsors = styled.div`
   }
 `;
 
-class Menu extends PureComponent {
-  renderMenuItem = ({ name, active, href }, index) => (
-    <MenuItem active={active} key={index} href={href}>
-      {name}
-    </MenuItem>
-  );
+export default class Menu extends PureComponent {
+  static propTypes = {
+    visible: PropTypes.bool,
+    items: PropTypes.arrayOf(PropTypes.shape({
+      name: PropTypes.string,
+      href: PropTypes.string,
+      active: PropTypes.bool,
+    })),
+    pathname: PropTypes.string,
+  };
+
+  static defaultProps = {
+    visible: false,
+    items: [
+      { name: 'HOME', href: '/' },
+      { name: 'AGENDA', href: '/agenda' },
+      { name: 'SPEAKERS', href: '/speakers' },
+    ],
+    pathname: '',
+  };
+
+  renderMenuItem = ({ name, href }, index) => {
+    const { pathname } = this.props;
+    return (
+      <MenuItem key={index} href={href} active={pathname === href}>
+        {name}
+      </MenuItem>
+    );
+  }
 
   render() {
     const { visible, items } = this.props;
+
     return (
       <Wrapper visible={visible}>
         <BlackObfuscator />
-        <LogoContaienr>
+        <LogoContainer>
           <Logo width="6.86em" height="3.57em" />
-        </LogoContaienr>
+        </LogoContainer>
         <Content>
           <Start>
             <MenuItemGroup>
@@ -201,18 +225,3 @@ class Menu extends PureComponent {
   }
 }
 
-Menu.propTypes = {
-  visible: PropTypes.bool,
-  items: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string,
-    href: PropTypes.string,
-    active: PropTypes.bool,
-  })),
-};
-
-Menu.defaultProps = {
-  visible: false,
-  items: [],
-};
-
-export default Menu;

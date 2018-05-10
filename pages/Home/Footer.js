@@ -3,11 +3,12 @@ import styled from 'styled-components';
 import Date from '../../components/Date';
 import Location from '../../components/Location';
 
-const Foooter = styled.div`
+const Container = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 0 5.25rem 2.5rem;
+  width: 100%;
 
   @media (max-width: 768px) {
     padding: 0 1.875rem;
@@ -21,7 +22,7 @@ const FooterItem = styled.div`
   align-items: center;
   height: 6.25rem;
   margin-left: 2px;
-  padding: 0 0.875rem 0 1.5rem;
+  padding: 0 1.5rem 0 0.875rem;
 
   &::before {
     content: "";
@@ -63,7 +64,7 @@ const FooterItem = styled.div`
 class Footer extends PureComponent {
   render() {
     return (
-      <Foooter>
+      <Container>
         <FooterItem>
           <Date />
         </FooterItem>
@@ -75,7 +76,7 @@ class Footer extends PureComponent {
             // TODO: add sponsors logo here
           }
         </FooterItem>
-      </Foooter>
+      </Container>
     );
   }
 }
