@@ -1,15 +1,28 @@
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
-import Wrapper from './Layout/Wrapper';
-import Header from './Layout/Header';
-import Main from './Home/Main';
-import MainButtons from './Home/MainButtons';
-import Footer from './Home/Footer';
 import FEDC from '../components/Fedc';
 import Logo from '../components/Logo';
 import YearIcon from '../components/YearIcon';
-import Menu from './Layout/Menu';
-import BlurFilter from './Layout/BlurFilter';
+import withMenu from './Layout/withMenu';
+import withBackground from './Layout/withBackground';
+import Footer from './Home/Footer';
+import MainButtons from './Home/MainButtons';
+
+const Wrapper = styled.div`
+  padding-top: 8rem;
+  flex-grow: 1;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const LogoGroup = styled.div`
+  position: relative;
+  min-height: 30rem;
+  display: flex;
+  justify-content: center;
+`;
 
 const LogoContainer = styled.div`
   position: absolute;
@@ -32,53 +45,25 @@ const FedcContainer = styled.div`
 `;
 
 class Index extends PureComponent {
-  state = {
-    menu: {
-      visible: false,
-      items: [
-        { name: 'HOME', href: '/', active: true },
-        { name: 'AGENDA', href: '/agenda', active: false },
-        { name: 'SPEAKERS', href: '/speakers', active: false },
-      ],
-    },
-  }
-
-  toggleMenu = () => {
-    const { menu } = this.state;
-    this.setState({
-      menu: {
-        ...menu,
-        visible: !menu.visible,
-      },
-    });
-  }
-
   render() {
-    const { toggleMenu } = this;
-    const { menu } = this.state;
-
     return (
       <Wrapper>
-        <Header toggleMenu={toggleMenu} menuVisible={menu.visible} />
-        <BlurFilter active={menu.visible}>
-          <Main>
-            <LogoContainer>
-              <Logo />
-            </LogoContainer>
-            <YearContainer>
-              <YearIcon />
-            </YearContainer>
-            <FedcContainer>
-              <FEDC />
-            </FedcContainer>
-          </Main>
-          <MainButtons />
-          <Footer />
-        </BlurFilter>
-        <Menu {...menu} />
-      </Wrapper>
+        <LogoGroup>
+          <LogoContainer>
+            <Logo />
+          </LogoContainer>
+          <YearContainer>
+            <YearIcon />
+          </YearContainer>
+          <FedcContainer>
+            <FEDC />
+          </FedcContainer>
+        </LogoGroup>
+        <MainButtons />
+        <Footer />
+      </Wrapper >
     );
   }
 }
 
-export default Index;
+export default withMenu(withBackground(Index));

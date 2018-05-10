@@ -8,21 +8,22 @@ import { switchMap } from 'rxjs/operators/switchMap';
 import { Scheduler } from 'rxjs';
 import { map } from 'rxjs/operators/map';
 import styled from 'styled-components';
-import BG0 from './BG0';
-import BG1 from './BG1';
-import BG2 from './BG2';
-import BG3 from './BG3';
-import BG4 from './BG4';
-import BG5 from './BG5';
-import BG6 from './BG6';
+import BG0 from './BGs/BG0';
+import BG1 from './BGs/BG1';
+import BG2 from './BGs/BG2';
+import BG3 from './BGs/BG3';
+import BG4 from './BGs/BG4';
+import BG5 from './BGs/BG5';
+import BG6 from './BGs/BG6';
 
 const Content = styled.div`
-  position: relative;
-  flex-grow: 1;
+  position: absolute;
+  width: 100%;
+  height: 75vh;
   display: flex;
+  top: 8rem;
   justify-content: center;
   align-items: center;
-  margin-top: 8rem;
   overflow: hidden;
 
   @media (max-width: 768px) {

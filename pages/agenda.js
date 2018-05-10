@@ -1,14 +1,9 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import Wrapper from './Layout/Wrapper';
-import Header from './Layout/Header';
-import Main from './Home/Main';
-import MainButtons from './Home/MainButtons';
-import Footer from './Home/Footer';
-import Menu from './Layout/Menu';
-import BlurFilter from './Layout/BlurFilter';
+import withMenu from './Layout/withMenu';
+import withBackground from './Layout/withBackground';
 
-const Contenter = styled.div`
+const Container = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
@@ -107,21 +102,6 @@ const TimelineItem = styled.li`
 class Index extends React.PureComponent {
   state = {
     tab: '14',
-    menu: {
-      visible: false,
-      items: [
-        { name: 'HOME', href: '/', active: true },
-        { name: 'AGENDA', href: '/agenda', active: false },
-        { name: 'SPEAKERS', href: '/speakers', active: false },
-      ],
-    },
-  }
-
-  onMenuClick = () => {
-    const { menu } = this.state;
-    this.setState({
-      menu: { ...menu, visible: !menu.visible },
-    });
   }
 
   onDay1Click = () => this.setState({ tab: '14' });
@@ -129,95 +109,85 @@ class Index extends React.PureComponent {
   onDay2Click = () => this.setState({ tab: '15' });
 
   render() {
-    const { tab, menu } = this.state;
+    const { tab } = this.state;
 
     return (
-      <Wrapper>
-        <Header toggleMenu={this.onMenuClick} menuVisible={menu.visible} />
-        <BlurFilter active={menu.visible}>
-          <Main>
-            <Contenter>
-              <Tabs>
-                <Tab active={tab === '14'} onClick={this.onDay1Click}>14 JUL</Tab>
-                <Tab active={tab === '15'} onClick={this.onDay2Click}>15 JUL</Tab>
-              </Tabs>
-              <Programs>
-                {tab === '14' && [
-                  <Program key="developer_program">
-                    <Legend>Developer Program</Legend>
-                    <Timeline>
-                      <TimelineItem><Time>09:00 - 09:20</Time> Openning</TimelineItem>
-                      <TimelineItem><Time>09:20 - 10:00</Time> Talk</TimelineItem>
-                      <TimelineItem><Time>10:00 - 10:40</Time> Talk</TimelineItem>
-                      <TimelineItem><Time>11:00 - 11:40</Time> Talk</TimelineItem>
-                      <TimelineItem><Time>12:00 - 12:40</Time> Lunch</TimelineItem>
-                      <TimelineItem><Time>13:00 - 13:40</Time> Talk</TimelineItem>
-                      <TimelineItem><Time>13:40 - 14:20</Time> Talk</TimelineItem>
-                      <TimelineItem><Time>14:40 - 15:20</Time> Talk</TimelineItem>
-                      <TimelineItem><Time>15:20 - 16:00</Time> Talk</TimelineItem>
-                      <TimelineItem><Time>16:20 - 17:40</Time> Forum</TimelineItem>
-                      <TimelineItem><Time>17:40 - 18:00</Time> Closeing</TimelineItem>
-                    </Timeline>
-                  </Program>,
-                  <Program key="designer_program">
-                    <Legend>Designer Program</Legend>
-                    <Timeline>
-                      <TimelineItem><Time>09:00 - 09:20</Time> Openning</TimelineItem>
-                      <TimelineItem><Time>09:20 - 10:00</Time> Talk</TimelineItem>
-                      <TimelineItem><Time>10:00 - 10:40</Time> Talk</TimelineItem>
-                      <TimelineItem><Time>11:00 - 11:40</Time> Talk</TimelineItem>
-                      <TimelineItem><Time>12:00 - 12:40</Time> Talk</TimelineItem>
-                      <TimelineItem><Time>13:00 - 13:40</Time> Lunch</TimelineItem>
-                      <TimelineItem><Time>13:40 - 14:20</Time> Talk</TimelineItem>
-                      <TimelineItem><Time>14:40 - 15:20</Time> Talk</TimelineItem>
-                      <TimelineItem><Time>15:20 - 16:00</Time> Talk</TimelineItem>
-                      <TimelineItem><Time>16:20 - 17:40</Time> Forum</TimelineItem>
-                      <TimelineItem><Time>17:40 - 18:00</Time> Closeing</TimelineItem>
-                    </Timeline>
-                  </Program>,
-                  <Program key="pitch space">
-                    <Legend>Pitch Space</Legend>
-                    <Timeline>
-                      <TimelineItem><Time>11:00 - 11:20</Time> Free</TimelineItem>
-                      <TimelineItem><Time>11:20 - 11:40</Time> Free</TimelineItem>
-                      <TimelineItem><Time>11:40 - 12:00</Time> Free</TimelineItem>
-                      <TimelineItem><Time>12:00 - 12:20</Time> Free</TimelineItem>
-                      <TimelineItem><Time>12:20 - 12:40</Time> Free</TimelineItem>
-                      <TimelineItem><Time>12:40 - 13:00</Time> Free</TimelineItem>
-                      <TimelineItem><Time>13:00 - 13:20</Time> Free</TimelineItem>
-                      <TimelineItem><Time>13:20 - 13:40</Time> Free</TimelineItem>
-                      <TimelineItem><Time>13:40 - 14:00</Time> Free</TimelineItem>
-                      <TimelineItem><Time>14:00 - 14:20</Time> Free</TimelineItem>
-                      <TimelineItem><Time>14:20 - 14:40</Time> Free</TimelineItem>
-                    </Timeline>
-                  </Program>,
-                ]}
-                {tab === '15' && [
-                  <Program key="developer_workshops">
-                    <Legend>Developer Workshops</Legend>
-                    <Timeline>
-                      <TimelineItem><Time>09:00 - 12:00</Time> Workshop</TimelineItem>
-                      <TimelineItem><Time>13:00 - 16:00</Time> Workshop</TimelineItem>
-                    </Timeline>
-                  </Program>,
-                  <Program key="designer_workshops">
-                    <Legend>Designer Workshops</Legend>
-                    <Timeline>
-                      <TimelineItem><Time>09:00 - 12:00</Time> Workshop</TimelineItem>
-                      <TimelineItem><Time>13:20 - 16:00</Time> Workshop</TimelineItem>
-                    </Timeline>
-                  </Program>,
-                ]}
-              </Programs>
-            </Contenter>
-          </Main>
-          <MainButtons />
-          <Footer />
-        </BlurFilter>
-        <Menu {...menu} />
-      </Wrapper>
+      <Container>
+        <Tabs>
+          <Tab active={tab === '14'} onClick={this.onDay1Click}>14 JUL</Tab>
+          <Tab active={tab === '15'} onClick={this.onDay2Click}>15 JUL</Tab>
+        </Tabs>
+        <Programs>
+          {tab === '14' && [
+            <Program key="developer_program">
+              <Legend>Developer Program</Legend>
+              <Timeline>
+                <TimelineItem><Time>09:00 - 09:20</Time> Openning</TimelineItem>
+                <TimelineItem><Time>09:20 - 10:00</Time> Talk</TimelineItem>
+                <TimelineItem><Time>10:00 - 10:40</Time> Talk</TimelineItem>
+                <TimelineItem><Time>11:00 - 11:40</Time> Talk</TimelineItem>
+                <TimelineItem><Time>12:00 - 12:40</Time> Lunch</TimelineItem>
+                <TimelineItem><Time>13:00 - 13:40</Time> Talk</TimelineItem>
+                <TimelineItem><Time>13:40 - 14:20</Time> Talk</TimelineItem>
+                <TimelineItem><Time>14:40 - 15:20</Time> Talk</TimelineItem>
+                <TimelineItem><Time>15:20 - 16:00</Time> Talk</TimelineItem>
+                <TimelineItem><Time>16:20 - 17:40</Time> Forum</TimelineItem>
+                <TimelineItem><Time>17:40 - 18:00</Time> Closeing</TimelineItem>
+              </Timeline>
+            </Program>,
+            <Program key="designer_program">
+              <Legend>Designer Program</Legend>
+              <Timeline>
+                <TimelineItem><Time>09:00 - 09:20</Time> Openning</TimelineItem>
+                <TimelineItem><Time>09:20 - 10:00</Time> Talk</TimelineItem>
+                <TimelineItem><Time>10:00 - 10:40</Time> Talk</TimelineItem>
+                <TimelineItem><Time>11:00 - 11:40</Time> Talk</TimelineItem>
+                <TimelineItem><Time>12:00 - 12:40</Time> Talk</TimelineItem>
+                <TimelineItem><Time>13:00 - 13:40</Time> Lunch</TimelineItem>
+                <TimelineItem><Time>13:40 - 14:20</Time> Talk</TimelineItem>
+                <TimelineItem><Time>14:40 - 15:20</Time> Talk</TimelineItem>
+                <TimelineItem><Time>15:20 - 16:00</Time> Talk</TimelineItem>
+                <TimelineItem><Time>16:20 - 17:40</Time> Forum</TimelineItem>
+                <TimelineItem><Time>17:40 - 18:00</Time> Closeing</TimelineItem>
+              </Timeline>
+            </Program>,
+            <Program key="pitch space">
+              <Legend>Pitch Space</Legend>
+              <Timeline>
+                <TimelineItem><Time>11:00 - 11:20</Time> Free</TimelineItem>
+                <TimelineItem><Time>11:20 - 11:40</Time> Free</TimelineItem>
+                <TimelineItem><Time>11:40 - 12:00</Time> Free</TimelineItem>
+                <TimelineItem><Time>12:00 - 12:20</Time> Free</TimelineItem>
+                <TimelineItem><Time>12:20 - 12:40</Time> Free</TimelineItem>
+                <TimelineItem><Time>12:40 - 13:00</Time> Free</TimelineItem>
+                <TimelineItem><Time>13:00 - 13:20</Time> Free</TimelineItem>
+                <TimelineItem><Time>13:20 - 13:40</Time> Free</TimelineItem>
+                <TimelineItem><Time>13:40 - 14:00</Time> Free</TimelineItem>
+                <TimelineItem><Time>14:00 - 14:20</Time> Free</TimelineItem>
+                <TimelineItem><Time>14:20 - 14:40</Time> Free</TimelineItem>
+              </Timeline>
+            </Program>,
+          ]}
+          {tab === '15' && [
+            <Program key="developer_workshops">
+              <Legend>Developer Workshops</Legend>
+              <Timeline>
+                <TimelineItem><Time>09:00 - 12:00</Time> Workshop</TimelineItem>
+                <TimelineItem><Time>13:00 - 16:00</Time> Workshop</TimelineItem>
+              </Timeline>
+            </Program>,
+            <Program key="designer_workshops">
+              <Legend>Designer Workshops</Legend>
+              <Timeline>
+                <TimelineItem><Time>09:00 - 12:00</Time> Workshop</TimelineItem>
+                <TimelineItem><Time>13:20 - 16:00</Time> Workshop</TimelineItem>
+              </Timeline>
+            </Program>,
+          ]}
+        </Programs>
+      </Container>
     );
   }
 }
 
-export default Index;
+export default withMenu(withBackground(Index));
