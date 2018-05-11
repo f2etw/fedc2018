@@ -68,7 +68,6 @@ class Header extends PureComponent {
           <WhichBurger onClick={toggleMenu} />
           <Menu>
             <MenuItem href="mailto:2018@fed.tw">Call For Sponsors</MenuItem>
-            <MenuItem href="mailto:2018@fed.tw">Call For Speakers</MenuItem>
           </Menu>
         </TopMenu>
         <BuyTicket
