@@ -6,7 +6,6 @@ import YearIcon from '../components/YearIcon';
 import withMenu from './Layout/withMenu';
 import withBackground from './Layout/withBackground';
 import Footer from './Home/Footer';
-import MainButtons from './Home/MainButtons';
 
 const Wrapper = styled.div`
   padding-top: 8rem;
@@ -59,7 +58,6 @@ class Index extends PureComponent {
             <FEDC />
           </FedcContainer>
         </LogoGroup>
-        <MainButtons />
         <Footer />
       </Wrapper >
     );
