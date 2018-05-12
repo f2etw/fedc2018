@@ -1,193 +1,122 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import withMenu from './Layout/withMenu';
-import withBackground from './Layout/withBackground';
+import DateTab from './Agenda/DateTab';
+import LocationTab from './Agenda/LocationTab';
+import AgendaItem from './Agenda/AgendaItem';
+import data from './Agenda/data.json';
 
-const Container = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -390px;
-  margin-top: -280px;
+const Wrapper = styled.div`
+  width: 62rem;
+  margin: 9.88rem auto 13.19rem auto;  
 `;
 
-const Tabs = styled.div`
-  display: flex;
-  margin-left: 40px;
+const Title = styled.h1`
+  font-size: 1.88rem;
+  letter-spacing: 1rem;
+  margin-left: 0.42rem;
+  margin-bottom: 0.96rem;
 `;
 
-const Tab = styled.div`
-  font-size: 24px;
-  padding: 10px;
-  margin-bottom: 20px;
-  margin-right: 10px;
-  cursor: pointer;
-  ${({ active }) => active && css`
-    border-bottom: 2px solid #FFF;
-  `}
-`;
-
-const Legend = styled.div`
-  font-size: 18px;
-  text-align: center;
-  margin-bottom: 16px;
-  width: 100%;
-  padding-left: 20px;
-`;
-
-const Program = styled.div`
-  width: 260px;
-`;
-
-const Programs = styled.div`
+const Main = styled.div`
   display: flex;
 `;
 
-const Time = styled.div`
-  position: absolute;
-  left: -120px;
-  text-align: right;
-  width: 110px;
-  font-size: 14px;
+const Left = styled.div``;
+const Right = styled.div`
+  flex-grow: 1;
+  margin-left: 4rem;
 `;
 
-const Timeline = styled.ul`
-  font-size: 14px;
-  line-height: 1.5;
-  color: rgba(0, 0, 0, 0.65);
-  box-sizing: border-box;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  margin-left: 140px;
+const LocationTabContainer = styled.div`
+  margin-top: 1.9rem;
+  margin-left: 7.2rem;
+  margin-bottom: 4rem;
+  display: flex;
 `;
 
-const TimelineItem = styled.li`
-  position: relative;
-  padding: 0 0 20px 18px;
-  list-style: none;
-  margin: 0;
-  font-size: 18px;
-  line-height: 23px;
-  color: #02f694;
+const AgendaItemContainer = styled.div``;
 
-  &:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 6.5px;
-    width: 10px;
-    height: 10px;
-    background-color: transparent;
-    border-radius: 100px;
-    border: 2px solid #02f694;
-    box-sizing: border-box;
+class Agenda extends React.PureComponent {
+  constructor(props) {
+    super(props);
+
+    const dateTabs = Object.keys(data);
+    const locationTabs = Object.keys(data[dateTabs[0]]);
+
+    this.state = {
+      date: dateTabs[0],
+      location: locationTabs[0],
+    };
   }
 
-  &:after {
-    content: "";
-    position: absolute;
-    left: 4px;
-    top: 16.5px;
-    height: calc(100% - 10px);
-    border-left: 2px solid #e8e8e8;
-    box-sizing: border-box;
+  onChangDate = date => () => {
+    const location = Object.keys(data[date])[0];
+    this.setState({ date, location });
   }
 
-  &:last-child:after {
-    display: none;
-  }
-`;
-
-class Index extends React.PureComponent {
-  state = {
-    tab: '14',
+  onChangeLocation = location => () => {
+    this.setState({ location });
   }
 
-  onDay1Click = () => this.setState({ tab: '14' });
+  renderAgendaItem = agenda =>
+    (<AgendaItem key={agenda} {...agenda} />)
 
-  onDay2Click = () => this.setState({ tab: '15' });
+  renderDateTab = (date) => {
+    const { onChangDate } = this;
+    const { date: activeDate } = this.state;
+    return (
+      <DateTab
+        active={date === activeDate}
+        onClick={onChangDate(date)}
+        key={date}
+      >
+        {date}
+      </DateTab>
+    );
+  }
+
+  renderLocationTab = (location) => {
+    const { onChangeLocation } = this;
+    const { location: activeLocation } = this.state;
+    return (
+      <LocationTab
+        active={location === activeLocation}
+        onClick={onChangeLocation(location)}
+        key={location}
+      >
+        {location}
+      </LocationTab>
+    );
+  }
+
 
   render() {
-    const { tab } = this.state;
+    const { renderDateTab, renderLocationTab, renderAgendaItem } = this;
+    const { date, location } = this.state;
+    const dateTabs = Object.keys(data);
+    const locationTabs = Object.keys(data[date]);
+    const agendas = data[date][location];
 
     return (
-      <Container>
-        <Tabs>
-          <Tab active={tab === '14'} onClick={this.onDay1Click}>14 JUL</Tab>
-          <Tab active={tab === '15'} onClick={this.onDay2Click}>15 JUL</Tab>
-        </Tabs>
-        <Programs>
-          {tab === '14' && [
-            <Program key="developer_program">
-              <Legend>Developer Program</Legend>
-              <Timeline>
-                <TimelineItem><Time>09:00 - 09:20</Time> Openning</TimelineItem>
-                <TimelineItem><Time>09:20 - 10:00</Time> Talk</TimelineItem>
-                <TimelineItem><Time>10:00 - 10:40</Time> Talk</TimelineItem>
-                <TimelineItem><Time>11:00 - 11:40</Time> Talk</TimelineItem>
-                <TimelineItem><Time>12:00 - 12:40</Time> Lunch</TimelineItem>
-                <TimelineItem><Time>13:00 - 13:40</Time> Talk</TimelineItem>
-                <TimelineItem><Time>13:40 - 14:20</Time> Talk</TimelineItem>
-                <TimelineItem><Time>14:40 - 15:20</Time> Talk</TimelineItem>
-                <TimelineItem><Time>15:20 - 16:00</Time> Talk</TimelineItem>
-                <TimelineItem><Time>16:20 - 17:40</Time> Forum</TimelineItem>
-                <TimelineItem><Time>17:40 - 18:00</Time> Closeing</TimelineItem>
-              </Timeline>
-            </Program>,
-            <Program key="designer_program">
-              <Legend>Designer Program</Legend>
-              <Timeline>
-                <TimelineItem><Time>09:00 - 09:20</Time> Openning</TimelineItem>
-                <TimelineItem><Time>09:20 - 10:00</Time> Talk</TimelineItem>
-                <TimelineItem><Time>10:00 - 10:40</Time> Talk</TimelineItem>
-                <TimelineItem><Time>11:00 - 11:40</Time> Talk</TimelineItem>
-                <TimelineItem><Time>12:00 - 12:40</Time> Talk</TimelineItem>
-                <TimelineItem><Time>13:00 - 13:40</Time> Lunch</TimelineItem>
-                <TimelineItem><Time>13:40 - 14:20</Time> Talk</TimelineItem>
-                <TimelineItem><Time>14:40 - 15:20</Time> Talk</TimelineItem>
-                <TimelineItem><Time>15:20 - 16:00</Time> Talk</TimelineItem>
-                <TimelineItem><Time>16:20 - 17:40</Time> Forum</TimelineItem>
-                <TimelineItem><Time>17:40 - 18:00</Time> Closeing</TimelineItem>
-              </Timeline>
-            </Program>,
-            <Program key="pitch space">
-              <Legend>Pitch Space</Legend>
-              <Timeline>
-                <TimelineItem><Time>11:00 - 11:20</Time> Free</TimelineItem>
-                <TimelineItem><Time>11:20 - 11:40</Time> Free</TimelineItem>
-                <TimelineItem><Time>11:40 - 12:00</Time> Free</TimelineItem>
-                <TimelineItem><Time>12:00 - 12:20</Time> Free</TimelineItem>
-                <TimelineItem><Time>12:20 - 12:40</Time> Free</TimelineItem>
-                <TimelineItem><Time>12:40 - 13:00</Time> Free</TimelineItem>
-                <TimelineItem><Time>13:00 - 13:20</Time> Free</TimelineItem>
-                <TimelineItem><Time>13:20 - 13:40</Time> Free</TimelineItem>
-                <TimelineItem><Time>13:40 - 14:00</Time> Free</TimelineItem>
-                <TimelineItem><Time>14:00 - 14:20</Time> Free</TimelineItem>
-                <TimelineItem><Time>14:20 - 14:40</Time> Free</TimelineItem>
-              </Timeline>
-            </Program>,
-          ]}
-          {tab === '15' && [
-            <Program key="developer_workshops">
-              <Legend>Developer Workshops</Legend>
-              <Timeline>
-                <TimelineItem><Time>09:00 - 12:00</Time> Workshop</TimelineItem>
-                <TimelineItem><Time>13:00 - 16:00</Time> Workshop</TimelineItem>
-              </Timeline>
-            </Program>,
-            <Program key="designer_workshops">
-              <Legend>Designer Workshops</Legend>
-              <Timeline>
-                <TimelineItem><Time>09:00 - 12:00</Time> Workshop</TimelineItem>
-                <TimelineItem><Time>13:20 - 16:00</Time> Workshop</TimelineItem>
-              </Timeline>
-            </Program>,
-          ]}
-        </Programs>
-      </Container>
+      <Wrapper>
+        <Title>AGENDA</Title>
+        <Main>
+          <Left>
+            {dateTabs.map(renderDateTab)}
+          </Left>
+          <Right>
+            <LocationTabContainer>
+              {locationTabs.map(renderLocationTab)}
+            </LocationTabContainer>
+            <AgendaItemContainer>
+              {agendas.map(renderAgendaItem)}
+            </AgendaItemContainer>
+          </Right>
+        </Main>
+      </Wrapper>
     );
   }
 }
 
-export default withMenu(withBackground(Index));
+export default withMenu(Agenda);

@@ -1,0 +1,51 @@
+{
+  "14": {
+    "10 F": [
+      {
+        "title": "Openning",
+        "time": ["09:00", "09:20"],
+        "introductions": [
+          "Once the printer ink runs dry it has to be replaced with another inkjet cartridge. There are many reputed companies like Canon, Epson, Dell, and Lexmark that provide the necessary cartridges to replace the empty cartridges."
+        ]
+      },
+      {
+        "title": "Why Product Thinking is the next big thing in UX Design",
+        "time": ["09:20", "10:00"],
+        "speaker": {
+          "avatar": "/static/icon/user.svg",
+          "name": "Joel Delgado"
+        },
+        "introductions": [
+          "Once the printer ink runs dry it has to be replaced with another inkjet cartridge. There are many reputed companies like Canon, Epson, Dell, and Lexmark that provide the necessary cartridges to replace the empty cartridges."
+        ]
+      },
+      {
+        "title": "Thought Experiment- VR Travel App",
+        "time": ["10:20", "11:00"],
+        "speaker": {
+          "avatar": "/static/icon/user.svg",
+          "name": "Wayne Richards"
+        },
+        "introductions": [
+          "I want to make a travel app which helps users visit places which are aggregated by city so that you can for example visit Austin without being here. The app will have a list of cities to visit and within them places you can look and walk around.",
+          "360 images give users a more immersive experience when viewed through a VR headset such as Google Cardboard. Before building the app I thought of my target audience and made a persona."
+        ]
+      },
+      {
+        "title": "Learns Faster And Better Than Everyone Else",
+        "time": ["11:20", "12:00"],
+        "speaker": {
+          "avatar": "/static/icon/user.svg",
+          "name": "Elon Musk"
+        },
+        "introductions": [
+          "How is it even possible that Elon Musk could build four multibillion companies by his mid-40s — in four separate fields (software, energy, transportation, and aerospace)?"
+        ]
+      },
+      { "title": "Lunch Time", "time": ["12:20", "13:00"] }
+    ],
+    "11 F": [],
+    "Pitch Space": []
+  },
+  "15": { "Developer Workshops": [], "Designer Workshops": [] }
+}

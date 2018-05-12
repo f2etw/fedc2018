@@ -17,6 +17,12 @@ injectGlobal`
   body {
     background-color: #311e6d;
   }
+
+  *{
+    &:before,&:after{
+      box-sizing: border-box;
+    }
+  }
 `;
 
 export default class MyDocument extends Document {
