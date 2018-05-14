@@ -5,10 +5,12 @@ import DateTab from './Agenda/DateTab';
 import LocationTab from './Agenda/LocationTab';
 import AgendaItem from './Agenda/AgendaItem';
 import data from './Agenda/data.json';
+import withFedcBackground from './Layout/withFedcBackground';
 
 const Wrapper = styled.div`
   width: 62rem;
-  margin: 9.88rem auto 13.19rem auto;  
+  margin: 9.88rem auto 13.19rem auto;
+  flex-grow: 1;
 `;
 
 const Title = styled.h1`
@@ -59,8 +61,8 @@ class Agenda extends React.PureComponent {
     this.setState({ location });
   }
 
-  renderAgendaItem = agenda =>
-    (<AgendaItem key={agenda} {...agenda} />)
+  renderAgendaItem = (agenda, index) =>
+    (<AgendaItem key={index} {...agenda} />)
 
   renderDateTab = (date) => {
     const { onChangDate } = this;
@@ -119,4 +121,4 @@ class Agenda extends React.PureComponent {
   }
 }
 
-export default withMenu(Agenda);
+export default withMenu(withFedcBackground(Agenda));
