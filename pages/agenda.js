@@ -4,8 +4,13 @@ import withMenu from './Layout/withMenu';
 import DateTab from './Agenda/DateTab';
 import LocationTab from './Agenda/LocationTab';
 import AgendaItem from './Agenda/AgendaItem';
-import data from './Agenda/data.json';
+// import data from './Agenda/data.json';
 import withFedcBackground from './Layout/withFedcBackground';
+
+const data = {
+  14: { '10 F': [], '11 F': [], 'Pitch Space': [] },
+  15: { 'Developer Workshops': [], 'Designer Workshops': [] },
+};
 
 const Wrapper = styled.div`
   width: 62rem;
