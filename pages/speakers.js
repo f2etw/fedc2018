@@ -3,7 +3,9 @@ import styled from 'styled-components';
 import withMenu from './Layout/withMenu';
 import withFedcBackground from './Layout/withFedcBackground';
 import Speaker from './Speakers/Speaker';
+import SpeakerDetail from './Speakers/SpeakerDetail';
 import data from './Speakers/data.json';
+import BlurFilter from './Layout/BlurFilter';
 
 const Wrapper = styled.div`
   flex-grow: 1;
@@ -24,20 +26,71 @@ const Container = styled.div`
 `;
 
 class Speakers extends PureComponent {
-  renderSpeaker = ({ name, avatar, titles }) => (
-    <Speaker name={name} avatar={avatar} titles={titles} />
-  )
+  state = {
+    activeIndex: undefined,
+  }
+
+  onActive = activeIndex => () => this.setState({ activeIndex });
+  onClose = () => this.setState({ activeIndex: undefined });
+  onLast = () => {
+    const { activeIndex } = this.state;
+    const nextActiveIndex = activeIndex - 1;
+    if (nextActiveIndex < 0) { return; }
+    this.setState({ activeIndex: nextActiveIndex });
+  }
+  onNext = () => {
+    const { activeIndex } = this.state;
+    const nextActiveIndex = activeIndex + 1;
+    if (nextActiveIndex > data.length - 1) { return; }
+    this.setState({ activeIndex: nextActiveIndex });
+  }
+
+  renderSpeaker = ({ name, avatar, titles }, index) => {
+    const { activeIndex } = this.state;
+    return (
+      <Speaker
+        key={name}
+        name={name}
+        avatar={avatar}
+        titles={titles}
+        active={activeIndex === index}
+        onActive={this.onActive(index)}
+      />
+    );
+  }
+
+  renderInnerSpeakers = () => React.createElement(withMenu(withFedcBackground(() => (
+    <Wrapper>
+      <Title>SPEAKERS</Title>
+      <Container>
+        {data.map(this.renderSpeaker)}
+      </Container>
+    </Wrapper>
+  ))))
 
   render() {
+    const { activeIndex } = this.state;
+    const {
+      onClose, onLast, onNext, renderInnerSpeakers,
+    } = this;
+
     return (
-      <Wrapper>
-        <Title>SPEAKERS</Title>
-        <Container>
-          {data.map(this.renderSpeaker)}
-        </Container>
-      </Wrapper>
+      <React.Fragment>
+        <BlurFilter active={data[activeIndex]}>
+          {renderInnerSpeakers()}
+        </BlurFilter>
+        { data[activeIndex] &&
+          <SpeakerDetail
+            {...data[activeIndex]}
+            onClose={onClose}
+            onLast={onLast}
+            onNext={onNext}
+            hasLast={activeIndex !== 0}
+            hasNext={activeIndex !== data.length - 1}
+          />}
+      </React.Fragment>
     );
   }
 }
 
-export default withMenu(withFedcBackground(Speakers));
+export default Speakers;
