@@ -57,6 +57,10 @@ const MenuItem = styled.a`
   }
 `;
 
+const StyledBuyTicket = styled(BuyTicket)`
+  visibility: ${({ visible }) => (visible ? 'visible' : 'hidden')};
+`;
+
 class Header extends PureComponent {
   render() {
     const { toggleMenu, menuVisible } = this.props;
@@ -70,7 +74,8 @@ class Header extends PureComponent {
             <MenuItem href="mailto:2018@fed.tw">Call For Sponsors</MenuItem>
           </Menu>
         </TopMenu>
-        <BuyTicket
+        <StyledBuyTicket
+          visible={!menuVisible}
           href="https://f2e.kktix.cc/events/fedc-2018"
           target="_blank"
           rel="noopener noreferrer"
@@ -86,7 +91,7 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-  toggleMenu: x => x,
+  toggleMenu: () => {},
   menuVisible: false,
 };
 
