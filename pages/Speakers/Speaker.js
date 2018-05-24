@@ -20,7 +20,7 @@ const Avatar = styled.img`
   margin:0 2.75rem;
   margin-bottom: 1.9rem;
   display: block;
-  filter: grayscale(100%);
+  filter: ${({ active }) => (active ? 'none' : 'grayscale(100%)')};
   transition: filter 300ms;
   cursor: pointer;
 
@@ -54,22 +54,29 @@ export default class Speaker extends PureComponent {
     name: PropTypes.string,
     avatar: PropTypes.string,
     titles: PropTypes.arrayOf(PropTypes.string),
+    active: PropTypes.bool,
+    onActive: PropTypes.func,
   }
 
   static defaultProps={
     name: '',
     avatar: '',
     titles: [],
+    active: false,
+    onActive: () => {},
   }
 
-  renderTitle = title => <Title key={title} dangerouslySetInnerHTML={{ __html: title }} />
+  renderTitle = title => <Title key={title}>{title}</Title>
 
   render() {
-    const { name, avatar, titles } = this.props;
+    const {
+      name, avatar, titles, onActive, active,
+    } = this.props;
+
     return (
       <Wrapper>
-        <Avatar src={avatar} />
-        <Name>{name}</Name>
+        <Avatar src={avatar} onClick={onActive} active={active} />
+        <Name onClick={onActive}>{name}</Name>
         {titles.map(this.renderTitle)}
       </Wrapper>
     );

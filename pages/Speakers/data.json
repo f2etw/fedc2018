@@ -2,44 +2,73 @@
   {
     "avatar": "/static/speaker/blue_chen.png",
     "name": "Blue Chen",
-    "titles": ["RelaJet 洞見未來創辦人"]
+    "titles": ["RelaJet 洞見未來創辦人"],
+    "introductions": [
+      "Used to work in some well-known IC semiconductors and IT companies. He is good at integrating Edge device - AI - cloud application, and believes that front-end technology will act as an important bridge between hardware and software.",
+      "Blue Chen is the founder of RelaJet, and is now developing hearing-related products with full attention."
+    ]
   },
   {
     "avatar": "/static/speaker/ct_wu.png",
     "name": "CT Wu",
-    "titles": ["Frontend Engineer, Appier"]
+    "titles": ["Frontend Engineer, Appier"],
+    "introductions": [
+      "Front-end Engineer. A founder and a CTO of a startup in the past. Love PureScript and Haskell. Collaborator of Recompose."
+    ]
   },
   {
     "avatar": "/static/speaker/kevin_tu.png",
     "name": "屠澤寬 Jeremiah Kevin Tu",
-    "titles": ["Sr. Front End Engineer"]
+    "titles": ["Sr. Front End Engineer"],
+    "introductions": [
+      "Ex-entrepreneur, build product and frontend work for more than 10 years, currently live in Boston, Massachusetts."
+    ]
   },
   {
     "avatar": "/static/speaker/david_khourshid.png",
     "name": "David Khourshid",
-    "titles": ["Software Engineer, Microsoft"]
+    "titles": ["Software Engineer, Microsoft"],
+    "introductions": [
+      "David Khourshid is a Florida-based software developer, author, and speaker. Also a fervent open-source contributor, he is passionate about JavaScript, CSS, animation, innovative user interfaces, and cutting-edge front-end technologies. When not behind a computer keyboard, he’s behind a piano keyboard or traveling."
+    ]
   },
   {
     "avatar": "/static/speaker/vibert_thio.png",
     "name": "張欣嘉 Vibert Thio",
-    "titles": ["新媒體藝術家"]
+    "titles": ["新媒體藝術家"],
+    "introductions": [
+      "Vibert Thio is both an engineer and digital artist. He is fascinated by new technology in hardware/software, experienced with several programming languages, modern web, and fast prototyping. He’s currently doing experiments with Web Audio API and WebGL to create art in web pages. In terms of art, audio/visual art is his main focus because of it’s usually about transforming the data flow from audio into meaningful visual scene, vice versa. Also, he designs his own musical instruments using a wide range of different sensors for performance."
+    ]
   },
   {
     "avatar": "/static/speaker/johny_vino.png",
     "name": "Johny Vino",
-    "titles": ["School of Visual Arts", "MFA Interaction design", "New York"]
+    "titles": ["School of Visual Arts", "MFA Interaction design", "New York"],
+    "introductions": [
+      "Johnyvino was born and raised in Tamilnadu in India. He graduated with a first class honors degree in Electronics Engineering. He is doing Masters in Interaction design at School of visual arts New York.",
+      "He is an Award-winning designer on Dribbble, UpLabs, Behance and more that is specializing in interaction design and animation techniques.",
+      "Worked for Zoho, Healthtap, Invision, SYP partners, Tekion, and more.",
+      "Interaction design (IxD) has become a brave new topic in today's design industry. Dribble has become full of an intricately timed gif that includes swiping, dragging, sliding and other snippets of gestures and movement clips. A master and journeyman for interaction design are Johny Vino, bringing the industry to a new height of UX design."
+    ]
   },
   {
     "avatar": "/static/speaker/diane_shen.png",
     "name": "沈美君 Diane Shen",
-    "titles": ["Creative Designer /<br/>Strategy Designer", "Business Models Inc Taiwan"]
+    "titles": ["Creative Designer /\nStrategy Designer", "Business Models Inc Taiwan"],
+    "introductions": [
+      "Diane is a service designer who masters strategy design and she is also a user researcher who knows how to code. She practices service design, strategy, experience design and she works with multinational and local companies for new business creation, entrepreneurship grogram and to solve complex innovation challenges.",
+      "Diane also confounded Service Design Network Taiwan Chapter and she is also a collaborator of “Design A Better Business.”"
+    ]
   },
   {
     "avatar": "/static/speaker/nelson_kuo.png",
     "name": "郭正澔 Nelson Kuo",
     "titles": [
-      "TANG Taipei office Sr. Manager /<br/>Sr. Experience Design Researcher",
+      "TANG Taipei office Sr. Manager /\nSr. Experience Design Researcher",
       "Conversion Lab Co-Founder"
+    ],
+    "introductions": [
+      "Nelson Kuo is the Taipei Sr. Office Manager & Experience researcher at TANG Consulting, Nelson work over 7 years in Product management, research & design. After Nelson Join TANG Consulting on 2014, he focus on consuming & Auto industries, help client to rebuild business & Service Strategy based on deep user research & analysis, Nelson has cooperated with Watsons China, Galaxy Macau, Porsche, WWE Group & Philips, etc."
     ]
   },
   {
@@ -50,19 +79,32 @@
       "School of Visual Arts",
       "Creative Director",
       "Mengdom Experimental Design Lab"
+    ],
+    "introductions": [
+      "Meng Chih Chiang is a digital designer, data artist, and writer based in New York.",
+      "In 2009, Meng graduated from BFA program in Visual Communication Design at National Taiwan Normal University (NTNU), as the recipient of Merit Scholarship. In 2011, Meng received a Government Scholarship of Taiwan to come to study at School of Visual Arts (SVA), MFA Computer Art in New York, concentrating on interactive art of interface, internet and data visualization. During graduate years in New York, Meng remained financially independent for her tuition and living expenses. In 2013 she graduated from SVA with Paula Rhodes Memorial Award for exceptional achievement in Computer Art.",
+      "Meng has been recognized by many top awards, including Red Dot Award, Macao Design Biennial Award, The Lumen Prize, Adobe Design Achievement Award, Google Chrome Experiments and has been featured in exhibitions worldwide.",
+      "Meng continues her career at American Express and Hi-Res!, respectively in New York. Her clients include many well-known brands, such as Nokia, M·A·C Cosmetics, League of Legends and Nike. In 2016, Meng became a faculty member at the graduate school of SVA."
     ]
   },
   {
     "avatar": "/static/speaker/chris_chen.png",
     "name": "陳偉仁 Chris Chen",
-    "titles": ["Product Design, PicCollage"]
+    "titles": ["Product Design, PicCollage"],
+    "introductions": [
+      "He has different design experiences in product related to education, social media platform and disaster Relief System. Currently working as Product Designer at PicCollage. Devote to bridge emerging technologies and people’s life with friendly and approachable product"
+    ]
   },
   {
     "avatar": "/static/speaker/hsienhui_tang.png",
     "name": "唐玄輝 Hsien-Hui Tang",
     "titles": [
       "Professor of Design Department NTUST",
-      "User Experience Innovation Consultant<br/>at DITLDESIGN & DBAcademy"
+      "User Experience Innovation Consultant\nat DITLDESIGN & DBAcademy"
+    ],
+    "introductions": [
+      "Dr. Hsien-Hui Tang is a professor and host of Design Information & Thinking Lab in the National University of Taiwan of Science and Technology. He was trained as an industrial designer, receiving his Phd in design cognition at Key Center of Design Computing and Cognition in the faculty of Architecture at The University of Sydney. His interest lies in both research and practice in design, and has NSC project, journal publication, industry collaborative design project, and related international events every year. He intends to use the research results as the foundation to improve design practice abilities. Research interests include design thinking, user experience, multidisciplinary collaboration, and design education.",
+      "Multiple workshops on scenarios and design thinking have been organized and hosted by him, including NTU, NTUST, CGU, TDC, CPC, ITRI, and Advantech, for human-centered innovative collaborative design. His recent projects focus on technology enabled UX design projects. The results received more than ten international and domestic design awards, including IF, Reddot, and etc."
     ]
   }
 ]
