@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import Burger from '../../components/Burger';
-import BurgerClose from '../../components/BugerClose';
+import BurgerClose from '../../components/BurgerClose';
 import BuyTicket from '../../components/BuyTicket';
 
 const Content = styled.div`
