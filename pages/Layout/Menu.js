@@ -1,35 +1,29 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-
+import document from 'global/document';
 import Logo from '../../components/Logo';
 import FacebookIcon from '../../components/FacebookIcon';
 
-const BlackObfuscator = styled.div`
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: -10;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+const Scroll = styled.div`
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 19;
+  overflow-y: auto;
 `;
 
 const Wrapper = styled.div`
   padding-top: 10rem;
   padding-bottom: 12rem;
-  display: ${({ visible }) => (visible ? 'flex' : 'none')};
+  display: flex;
   flex-direction: column;
-  
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
   height: 100%;
-  z-index: 19;
 
   @media (max-width: 768px){
-    position: absolute;
     height: auto;
     padding-left: 2.5em;
     padding-right: 2.5em;
@@ -179,6 +173,9 @@ export default class Menu extends PureComponent {
     pathname: '',
   };
 
+  componentDidMount() { document.body.style.overflow = 'hidden'; }
+  componentWillUnmount() { document.body.style.overflow = 'auto'; }
+
   renderMenuItem = ({ name, href }, index) => {
     const { pathname } = this.props;
     return (
@@ -192,36 +189,35 @@ export default class Menu extends PureComponent {
     const { visible, items } = this.props;
 
     return (
-      <Wrapper visible={visible}>
-        <BlackObfuscator />
-        <LogoContainer>
-          <Logo width="6.86em" height="3.57em" />
-        </LogoContainer>
-        <Content>
-          <Start>
-            <MenuItemGroup>
+      <Scroll visible={visible}>
+        <Wrapper>
+          <LogoContainer>
+            <Logo width="6.86em" height="3.57em" />
+          </LogoContainer>
+          <Content>
+            <Start>
+              <MenuItemGroup>
+                { items.map(this.renderMenuItem) }
+              </MenuItemGroup>
+            </Start>
+            <FacebookIconContainer>
+              <a
+                href="https://www.facebook.com/events/196401260949269/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FacebookIcon />
+              </a>
+            </FacebookIconContainer>
+            <End>
+              <OurSponsors>OUR SPONSORS</OurSponsors>
               {
-                items.map(this.renderMenuItem)
+                // TODO: add sponsors logo here
               }
-            </MenuItemGroup>
-          </Start>
-          <FacebookIconContainer>
-            <a
-              href="https://www.facebook.com/events/196401260949269/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FacebookIcon />
-            </a>
-          </FacebookIconContainer>
-          <End>
-            <OurSponsors>OUR SPONSORS</OurSponsors>
-            {
-              // TODO: add sponsors logo here
-            }
-          </End>
-        </Content>
-      </Wrapper>
+            </End>
+          </Content>
+        </Wrapper>
+      </Scroll>
     );
   }
 }

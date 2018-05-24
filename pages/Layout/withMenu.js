@@ -17,26 +17,26 @@ export default Component => class extends PureComponent {
   };
 
   state = {
-    menu: { visible: false },
+    visible: false,
   }
 
   toggleMenu = () => {
-    const { menu } = this.state;
-    this.setState({ menu: { visible: !menu.visible } });
+    const { visible } = this.state;
+    this.setState({ visible: !visible });
   }
 
   render() {
     const { toggleMenu } = this;
-    const { menu } = this.state;
+    const { visible } = this.state;
     const { url: { pathname } } = this.props;
 
     return (
       <Wrapper>
-        <Header toggleMenu={toggleMenu} menuVisible={menu.visible} />
-        <BlurFilter active={menu.visible}>
+        <Header toggleMenu={toggleMenu} menuVisible={visible} />
+        <BlurFilter active={visible}>
           <Component {...this.props} />
         </BlurFilter>
-        <Menu visible={menu.visible} pathname={pathname} />
+        {visible && <Menu pathname={pathname} />}
       </Wrapper>
     );
   }
