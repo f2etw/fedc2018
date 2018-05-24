@@ -1,0 +1,68 @@
+[
+  {
+    "avatar": "/static/speaker/blue_chen.png",
+    "name": "Blue Chen",
+    "titles": ["RelaJet 洞見未來創辦人"]
+  },
+  {
+    "avatar": "/static/speaker/ct_wu.png",
+    "name": "CT Wu",
+    "title": ["Frontend Engineer, Appier"]
+  },
+  {
+    "avatar": "/static/speaker/kevin_tu.png",
+    "name": "屠澤寬 Jeremiah Kevin Tu",
+    "titles": ["Sr. Front End Engineer"]
+  },
+  {
+    "avatar": "/static/speaker/david_khourshid.png",
+    "name": "David Khourshid",
+    "titles": ["Software Engineer, Microsoft"]
+  },
+  {
+    "avatar": "/static/speaker/vibert_thio.png",
+    "name": "張欣嘉 Vibert Thio",
+    "titles": ["新媒體藝術家"]
+  },
+  {
+    "avatar": "/static/speaker/johny_vino.png",
+    "name": "Johny Vino",
+    "titles": ["School of Visual Arts", "MFA Interaction design", "New York"]
+  },
+  {
+    "avatar": "/static/speaker/diane_shen.png",
+    "name": "沈美君 Diane Shen",
+    "titles": ["Creative Designer /<br/>Strategy Designer", "Business Models Inc Taiwan"]
+  },
+  {
+    "avatar": "/static/speaker/nelson_kuo.png",
+    "name": "郭正澔 Nelson Kuo",
+    "titles": [
+      "TANG Taipei office Sr. Manager /<br/>Sr. Experience Design Researcher",
+      "Conversion Lab Co-Founder"
+    ]
+  },
+  {
+    "avatar": "/static/speaker/mengchih_chiang.png",
+    "name": "江孟芝 MengChih Chiang",
+    "titles": [
+      "Faculty, MFA Computer Art Department",
+      "School of Visual Arts",
+      "Creative Director",
+      "Mengdom Experimental Design Lab"
+    ]
+  },
+  {
+    "avatar": "/static/speaker/chris_chen.png",
+    "name": "陳偉仁 Chris Chen",
+    "titles": ["Product Design, PicCollage"]
+  },
+  {
+    "avatar": "/static/speaker/hsienhui_tang.png",
+    "name": "唐玄輝 Hsien-Hui Tang",
+    "titles": [
+      "Professor of Design Department NTUST",
+      "User Experience Innovation Consultant<br/>at DITLDESIGN & DBAcademy"
+    ]
+  }
+]
