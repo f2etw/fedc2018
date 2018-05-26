@@ -6,6 +6,14 @@ import Burger from '../../components/Burger';
 import BurgerClose from '../../components/BurgerClose';
 import BuyTicket from '../../components/BuyTicket';
 
+const Wrapper = styled.div`
+  height: 8rem;
+
+  @media (max-width: 768px) {
+    padding-bottom: 1rem;
+  }
+`;
+
 const Content = styled.div`
   position: fixed;
   left: 0;
@@ -20,6 +28,7 @@ const Content = styled.div`
 
   @media (max-width: 768px) {
     padding: 1.25rem 1.25rem;
+    position: relative;
   }
 `;
 
@@ -63,19 +72,21 @@ class Header extends PureComponent {
     const WhichBurger = menuVisible ? BurgerClose : Burger;
 
     return (
-      <Content menuVisible={menuVisible}>
-        <TopMenu>
-          <WhichBurger onClick={toggleMenu} />
-          <Menu>
-            <MenuItem href="mailto:2018@fed.tw">Call For Sponsors</MenuItem>
-          </Menu>
-        </TopMenu>
-        <BuyTicket
-          href="https://f2e.kktix.cc/events/fedc-2018"
-          target="_blank"
-          rel="noopener noreferrer"
-        />
-      </Content>
+      <Wrapper>
+        <Content menuVisible={menuVisible}>
+          <TopMenu>
+            <WhichBurger onClick={toggleMenu} />
+            <Menu>
+              <MenuItem href="mailto:2018@fed.tw">Call For Sponsors</MenuItem>
+            </Menu>
+          </TopMenu>
+          <BuyTicket
+            href="https://f2e.kktix.cc/events/fedc-2018"
+            target="_blank"
+            rel="noopener noreferrer"
+          />
+        </Content>
+      </Wrapper>
     );
   }
 }
