@@ -9,20 +9,34 @@ import BlurFilter from './Layout/BlurFilter';
 
 const Wrapper = styled.div`
   flex-grow: 1;
-  width: 64.26rem;
-  margin:9.88rem auto 16.75rem auto;
+  margin: 0 auto 16.75rem auto;
 `;
 
 const Title = styled.h1`
   font-size: 1.88rem;
   letter-spacing: 1rem;
   margin-left: 0.42rem;
-  margin-bottom: 6.25rem;
+  margin-bottom: 4.25rem;
+
+  @media (max-width: 40em){
+    margin-left: 0;
+    margin-right: -0.5rem;
+    text-align: center;
+  }
 `;
 
 const Container = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(1, 1fr);
+
+  @media (min-width: 40em){
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 60em){
+    grid-template-columns: repeat(3, 1fr);
+  }
 `;
 
 class Speakers extends PureComponent {

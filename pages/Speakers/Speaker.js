@@ -4,13 +4,7 @@ import PropTypes from 'prop-types';
 
 const Wrapper = styled.div`
   width: 18em;
-  &:not(:nth-child(3n)){
-    margin-right: 5.13em;
-  }
-
-  &:nth-child(n+4){
-    margin-top: 6.25em;
-  }
+  height: 26em;
 `;
 
 const Avatar = styled.img`
@@ -25,7 +19,7 @@ const Avatar = styled.img`
   cursor: pointer;
 
   &:hover{
-    filter: grayscale(0%);    
+    filter: grayscale(0%);
   }
 `;
 
@@ -34,7 +28,7 @@ const Name = styled.div`
   text-align: center;
   line-height: 1;
   margin-bottom: 1.25rem;
-  cursor: pointer;  
+  cursor: pointer;
 `;
 
 const Title = styled.pre`
@@ -43,9 +37,9 @@ const Title = styled.pre`
   line-height: 1.25rem;
   color: #C2B9EE;
   font-weight: 500;
-  
+
   &:not(:last-of-type){
-    margin-bottom: 1.15em;  
+    margin-bottom: 1.15em;
   }
 `;
 
