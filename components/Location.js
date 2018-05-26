@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Chinese = styled.div`
   font-family: STYuanti-TC-Bold;
   font-size: 1.5rem;
-  letter-spacing: 0.45rem;
+  letter-spacing: 0.3rem;
 `;
 
 const English = styled.div`

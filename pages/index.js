@@ -8,7 +8,6 @@ import withBackground from './Layout/withBackground';
 import Footer from './Home/Footer';
 
 const Wrapper = styled.div`
-  padding-top: 8rem;
   flex-grow: 1;
   display:flex;
   flex-direction: column;
@@ -18,9 +17,11 @@ const Wrapper = styled.div`
 
 const LogoGroup = styled.div`
   position: relative;
-  min-height: 30rem;
+  flex-grow: 1;
   display: flex;
   justify-content: center;
+  min-height: 500px;
+  margin-top: 3rem;
 `;
 
 const LogoContainer = styled.div`
