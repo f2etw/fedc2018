@@ -1,51 +1,215 @@
-{
-  "14": {
-    "10 F": [
-      {
-        "title": "Openning",
-        "time": ["09:00", "09:20"],
-        "introductions": [
-          "Once the printer ink runs dry it has to be replaced with another inkjet cartridge. There are many reputed companies like Canon, Epson, Dell, and Lexmark that provide the necessary cartridges to replace the empty cartridges."
-        ]
-      },
-      {
-        "title": "Why Product Thinking is the next big thing in UX Design",
-        "time": ["09:20", "10:00"],
-        "speaker": {
-          "avatar": "/static/icon/user.svg",
-          "name": "Joel Delgado"
-        },
-        "introductions": [
-          "Once the printer ink runs dry it has to be replaced with another inkjet cartridge. There are many reputed companies like Canon, Epson, Dell, and Lexmark that provide the necessary cartridges to replace the empty cartridges."
-        ]
-      },
-      {
-        "title": "Thought Experiment- VR Travel App",
-        "time": ["10:20", "11:00"],
-        "speaker": {
-          "avatar": "/static/icon/user.svg",
-          "name": "Wayne Richards"
-        },
-        "introductions": [
-          "I want to make a travel app which helps users visit places which are aggregated by city so that you can for example visit Austin without being here. The app will have a list of cities to visit and within them places you can look and walk around.",
-          "360 images give users a more immersive experience when viewed through a VR headset such as Google Cardboard. Before building the app I thought of my target audience and made a persona."
-        ]
-      },
-      {
-        "title": "Learns Faster And Better Than Everyone Else",
-        "time": ["11:20", "12:00"],
-        "speaker": {
-          "avatar": "/static/icon/user.svg",
-          "name": "Elon Musk"
-        },
-        "introductions": [
-          "How is it even possible that Elon Musk could build four multibillion companies by his mid-40s — in four separate fields (software, energy, transportation, and aerospace)?"
-        ]
-      },
-      { "title": "Lunch Time", "time": ["12:20", "13:00"] }
-    ],
-    "11 F": [],
-    "Pitch Space": []
+[
+  {
+    "title": "Openning",
+    "time": ["09:00", "09:20"]
   },
-  "15": { "Developer Workshops": [], "Designer Workshops": [] }
-}
+  {
+    "highlights": ["11F", "EN", "Design"],
+    "title": "Art collective teamLab’s universal concept",
+    "time": ["09:20", "10:00"],
+    "speakers": [{
+      "id": "daisuke_sakai",
+      "name": "Daisuke Sakai"
+    }],
+    "tags": []
+  },
+  {
+    "highlights": ["10F", "CN", "FrontEnd"],
+    "title": "Path of web design modularization",
+    "time": ["09:20", "10:00"],
+    "speakers": [{
+      "id": "kevin_tu",
+      "name": "屠澤寬 Jeremiah Kevin Tu"
+    }],
+    "tags": []
+  },
+  {
+    "title": "Pitch Space",
+    "time": ["10:00", "16:00"]
+  },
+  {
+    "highlights": ["11F", "CN", "Design"],
+    "title": "The Future of Visual Language: Storytelling with Data Visualization",
+    "time": ["10:10", "10:50"],
+    "speakers": [{
+      "id": "mengchih_chiang",
+      "name": "江孟芝 MengChih Chiang"
+    }],
+    "tags": [
+      "Data",
+      "Visualization",
+      "Data Visualization",
+      "Infographic",
+      "Storytelling",
+      "Design",
+      "Art",
+      "Visual Language",
+      "Programming Art"
+    ]
+  },
+  {
+    "highlights": ["10F", "CN", "FrontEnd"],
+    "title": "10F - PureScript for JavaScript Developers",
+    "time": ["10:10", "10:50"],
+    "speakers": [{
+      "id": "ct_wu",
+      "name": "CT Wu"
+    }],
+    "tags": [
+      "Functional Programming",
+      "PureScript"
+    ]
+  },
+  {
+    "highlights": ["10F Registration"],
+    "title": "Lunch",
+    "time": ["10:50", "12:40"]
+  },
+  {
+    "highlights": ["11F", "EN", "Design"],
+    "title": "Meaningful Micro-Interaction in HCI",
+    "time": ["11:00", "11:40"],
+    "speakers": [{
+      "id": "johny_vino",
+      "name": "Johny Vino"
+    }],
+    "tags": [
+      "HCI",
+      "Interaction design",
+      "Micro-Interaction",
+      "UI",
+      "UX",
+      "Design thinking",
+      "Experience design",
+      "Prototyping"
+    ]
+  },
+  {
+    "highlights": ["10F", "CN", "FrontEnd"],
+    "title": "Learn Tensorflow.js in 30 minutes",
+    "time": ["11:50", "12:30"],
+    "speakers": [{
+      "id": "blue_chen",
+      "name": "Blue Chen"
+    }],
+    "tags": [
+      "Deep learning",
+      "Tensorflow.js",
+      "Deeplearn.js"
+    ]
+  },
+  {
+    "highlights": ["11F", "EN", "FrontEnd"],
+    "title": "The (Finite) State of Reactive Animations",
+    "time": ["12:40", "13:20"],
+    "speakers": [{
+      "id": "david_khourshid",
+      "name": "David Khourshid"
+    }],
+    "tags": [
+      "Functional",
+      "Reactive",
+      "Animation",
+      "CSS",
+      "Finite State Machines"
+    ]
+  },
+  {
+    "highlights": ["10F", "CN", "Design"],
+    "title": "Beyond Pixel - Design in Augmented Reality",
+    "time": ["12:40", "13:20"],
+    "speakers": [{
+      "id": "chris_chen",
+      "name": "Chris Chen"
+    }],
+    "tags": [
+      "AR",
+      "Augmented Reality",
+      "3D design",
+      "UX"
+    ]
+  },
+  {
+    "highlights": ["11F", "CN", "FrontEnd"],
+    "title": "Audio Visual Experiments in Modern Web",
+    "time": ["13:30", "14:10"],
+    "speakers": [{
+      "id": "vibert_thio",
+      "name": "張欣嘉 Vibert Thio"
+    }]
+  },
+  {
+    "highlights": ["10F", "CN", "Design"],
+    "title": "10 things I wish I knew about strategy design",
+    "time": ["13:30", "14:10"],
+    "speakers": [{
+      "id": "diane_shen",
+      "name": "沈美君 Diane Shen"
+    }],
+    "tags": [
+      "strategydesign",
+      "whyshouldIcare",
+      "cocreationfordoingjobbetter",
+      "stratagythinkinganddoing",
+      "bettercollaborationwithpeople"
+    ]
+  },
+  {
+    "highlights": ["11F", "EN", "FrontEnd"],
+    "title": "Type-safe, type-level, type-driven solutions with PureScript",
+    "time": ["14:20", "15:00"],
+    "speakers": [{
+      "id": "​​justin_woo",
+      "name": "​​Justin Woo"
+    }],
+    "tags": [
+      "Functional programming",
+      "PureScript",
+      "type-level programming"
+    ]
+  },
+  {
+    "highlights": ["10F", "CN", "Design"],
+    "title": "Appreciating the multifaceted F2E from user experience to service design",
+    "time": ["14:20", "15:30"],
+    "speakers": [{
+      "id": "hsienhui_tang",
+      "name": "唐玄輝 Hsien-Hui Tang"
+    }],
+    "tags": [
+      "User Experience",
+      "Service Design",
+      "Service F2E"
+    ]
+  },
+  {
+    "highlights": ["11F", "EN", "FrontEnd"],
+    "title": "A look at 2018's Chrome DevTools",
+    "time": ["15:10", "15:50"],
+    "speakers": [{
+      "id": "paul_irish",
+      "name": "​​Paul Irish"
+    }],
+    "tags": [
+      "Tooling",
+      "productivity",
+      "javascript"
+    ]
+  },
+  {
+    "highlights": ["10F", "CN", "Design"],
+    "title": "The opportunities of Auto industry’s future: Travel service experience innovation",
+    "time": ["15:10", "15:50"],
+    "speakers": [{
+      "id": "nelson_kuo",
+      "name": "郭正澔 Nelson Kuo"
+    }],
+    "tags": [
+      "Travel Experience",
+      "Service Design",
+      "Experience Thinking",
+      "Experience Strategy",
+      "Auto Experience Innovation"
+    ]
+  }
+]

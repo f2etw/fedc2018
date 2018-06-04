@@ -6,16 +6,12 @@ const Wrapper = styled.div`
   display: flex;
   align-items: flex-end;
   line-height: 1;
-  opacity: ${({ active }) => (active ? '1' : '0.3')};  
-  cursor: pointer;
-
-  &:not(:first-child){
-    margin-top: 1rem;
-  }
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 `;
 
 const Date = styled.div`
-  font-size: 9rem;
+  font-size: 4rem;
   color: white;
   font-weight: 500;
   margin-left: 0.1rem;
@@ -24,10 +20,9 @@ const Date = styled.div`
 
 const Month = styled.div`
   font-size: 1.5rem;
-  margin-bottom: 0.78rem;
+  margin-bottom: 0.38rem;
   letter-spacing: 0.1rem;
 `;
-
 
 export default class DateTab extends PureComponent {
   static propTypes = {

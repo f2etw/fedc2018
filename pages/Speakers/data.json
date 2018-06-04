@@ -1,5 +1,6 @@
 [
   {
+    "id": "blue_chen",
     "avatar": "/static/speaker/blue_chen.png",
     "name": "Blue Chen",
     "titles": ["RelaJet 洞見未來創辦人"],
@@ -9,6 +10,7 @@
     ]
   },
   {
+    "id": "ct_wu",
     "avatar": "/static/speaker/ct_wu.png",
     "name": "CT Wu",
     "titles": ["Frontend Engineer, Appier"],
@@ -17,6 +19,7 @@
     ]
   },
   {
+    "id": "kevin_tu",
     "avatar": "/static/speaker/kevin_tu.png",
     "name": "屠澤寬 Jeremiah Kevin Tu",
     "titles": ["Sr. Front End Engineer"],
@@ -25,6 +28,7 @@
     ]
   },
   {
+    "id": "david_khourshid",
     "avatar": "/static/speaker/david_khourshid.png",
     "name": "David Khourshid",
     "titles": ["Software Engineer, Microsoft"],
@@ -33,6 +37,7 @@
     ]
   },
   {
+    "id": "vibert_thio",
     "avatar": "/static/speaker/vibert_thio.png",
     "name": "張欣嘉 Vibert Thio",
     "titles": ["新媒體藝術家"],
@@ -41,6 +46,7 @@
     ]
   },
   {
+    "id": "johny_vino",
     "avatar": "/static/speaker/johny_vino.png",
     "name": "Johny Vino",
     "titles": ["School of Visual Arts", "MFA Interaction design", "New York"],
@@ -52,6 +58,7 @@
     ]
   },
   {
+    "id": "diane_shen",
     "avatar": "/static/speaker/diane_shen.png",
     "name": "沈美君 Diane Shen",
     "titles": ["Creative Designer /\nStrategy Designer", "Business Models Inc Taiwan"],
@@ -61,6 +68,7 @@
     ]
   },
   {
+    "id": "nelson_kuo",
     "avatar": "/static/speaker/nelson_kuo.png",
     "name": "郭正澔 Nelson Kuo",
     "titles": [
@@ -72,6 +80,7 @@
     ]
   },
   {
+    "id": "mengchih_chiang",
     "avatar": "/static/speaker/mengchih_chiang.png",
     "name": "江孟芝 MengChih Chiang",
     "titles": [
@@ -88,6 +97,7 @@
     ]
   },
   {
+    "id": "chris_chen",
     "avatar": "/static/speaker/chris_chen.png",
     "name": "陳偉仁 Chris Chen",
     "titles": ["Product Design, PicCollage"],
@@ -96,6 +106,7 @@
     ]
   },
   {
+    "id": "hsienhui_tang",
     "avatar": "/static/speaker/hsienhui_tang.png",
     "name": "唐玄輝 Hsien-Hui Tang",
     "titles": [
