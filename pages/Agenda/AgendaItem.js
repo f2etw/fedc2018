@@ -1,13 +1,13 @@
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-
+import window from 'global/window';
 
 const Wrapper = styled.div`
   display: flex;
   &:not(:first-child){
     margin-top: 3.84rem;
-  }  
+  }
 `;
 
 const Time = styled.div`
@@ -15,7 +15,8 @@ const Time = styled.div`
   font-size: 1.13em;
   text-align: right;
   width: 2.5em;
-  flex-shrink: 0;  
+  flex-shrink: 0;
+  padding-left: 0.6em;
 `;
 
 const End = styled.div`
@@ -40,7 +41,7 @@ const Divider = styled.div`
     display: block;
     width: 0.9rem;
     height: 0.9em;
-    margin-top: 0.15rem;    
+    margin-top: 0.15rem;
     background-color: #321F6E;
     border-radius: 50%;
     opacity: 0.5;
@@ -52,6 +53,11 @@ const Divider = styled.div`
     width: 1px;
     background-color: #02f674;
     flex-grow: 1;
+  }
+
+  @media (max-width: 30rem){
+    margin-left: 0.79rem;
+    margin-right: 0.79rem;
   }
 `;
 
@@ -65,60 +71,94 @@ const Title = styled.h2`
   margin-bottom: 1.2rem;
 `;
 
-const Introduction = styled.p`
+const Tags = styled.p`
+  display: block;
+  margin-bottom: 1.4rem;
+`;
+
+const Tag = styled.p`
+  display: inline-block;
   color: #C2B9EE;
   font-size: 1.13rem;
   line-height: 1.63rem;
   letter-spacing: -0.001rem;
-  &:not(:first-of-type){
-    margin-top: 1.5rem;
+  border: 1px solid #C2B9EE;
+  padding: .1rem .6rem;
+  margin: .3rem;
+
+  @media (max-width: 30rem){
+    font-size: 0.63rem;
+    margin-left: 0.79rem;
+    margin-right: 0.79rem;
   }
 `;
 
 const Speaker = styled.div`
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   font-weight: 500;
   color: #C2B9EE;
   letter-spacing: 0.05rem;
   margin-bottom: 1.2rem;
+`;
 
+const Avatar = styled.img`
+  width: 2.5rem;
+  margin-right: 0.6rem;
+  border-radius: 100%;
+`;
+
+const Name = styled.div`
+  flex-grow: 1;
+  flex-basis: 12rem;
+  margin-top: 1rem;
   &:after{
     content:">>";
     margin-left: 0.2rem;
   }
 `;
 
-const Avatar = styled.img`
-  width: 2.5rem;
-  margin-right: 0.6rem;
+const WrapHighlight = styled.div`
+  display: flex;
 `;
 
+const Highlight = styled.div`
+  letter-spacing: .1rem;
+  padding: .5rem;
+  margin: .5rem .5rem .5rem 0;
+  border: 1px solid #02f694;
+`;
 
 export default class AgendaItem extends PureComponent {
   static propTypes = {
     title: PropTypes.string,
-    speaker: PropTypes.shape({
+    speakers: PropTypes.arrayOf(PropTypes.shape({
       name: PropTypes.string,
       avatar: PropTypes.string,
-    }),
+    })),
     time: PropTypes.arrayOf(PropTypes.string),
-    introductions: PropTypes.arrayOf(PropTypes.string),
+    tags: PropTypes.arrayOf(PropTypes.string),
+    highlights: PropTypes.arrayOf(PropTypes.string),
   }
 
   static defaultProps={
     title: '',
-    speaker: null,
+    speakers: null,
     time: [],
-    introductions: [],
+    tags: [],
+    highlights: [],
   }
 
-  renderIntroduction = introduction =>
-    (<Introduction key={introduction}>{introduction}</Introduction>)
+  onClick = (id) => {
+    window.location = `/${id}`;
+  };
+
+  renderTag = tag => (<Tag key={tag}>{tag}</Tag>)
 
   render() {
     const {
-      title, speaker, time, introductions,
+      highlights, title, speakers, time, tags,
     } = this.props;
     const [start, end] = time;
 
@@ -130,14 +170,19 @@ export default class AgendaItem extends PureComponent {
         </Time>
         <Divider />
         <Content>
+          {highlights && (
+            <WrapHighlight>
+              {highlights.map(highlight => <Highlight>{highlight}</Highlight>)}
+            </WrapHighlight>
+          )}
           <Title>{title}</Title>
-          { speaker &&
-          <Speaker>
-            <Avatar src={speaker.avatar} />
-            {speaker.name}
-          </Speaker>}
-          { introductions &&
-          introductions.map(this.renderIntroduction) }
+          {speakers && speakers.map(speaker => (
+            <Speaker onClick={() => this.onClick(speaker.id)}>
+              <Avatar src={`/static/speaker/${speaker.id}.png`} />
+              <Name>{speaker.name}</Name>
+            </Speaker>
+          ))}
+          {tags && <Tags>{tags.map(this.renderTag)}</Tags>}
         </Content>
       </Wrapper>
     );

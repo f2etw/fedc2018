@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import window from 'global/window';
 
 const Wrapper = styled.div`
   width: 18em;
@@ -14,7 +15,7 @@ const Avatar = styled.img`
   margin:0 2.75rem;
   margin-bottom: 1.9rem;
   display: block;
-  filter: ${({ active }) => (active ? 'none' : 'grayscale(100%)')};
+  filter: grayscale(100%);
   transition: filter 300ms;
   cursor: pointer;
 
@@ -45,32 +46,33 @@ const Title = styled.pre`
 
 export default class Speaker extends PureComponent {
   static propTypes = {
+    id: PropTypes.string,
     name: PropTypes.string,
     avatar: PropTypes.string,
     titles: PropTypes.arrayOf(PropTypes.string),
-    active: PropTypes.bool,
-    onActive: PropTypes.func,
   }
 
   static defaultProps={
+    id: '',
     name: '',
     avatar: '',
     titles: [],
-    active: false,
-    onActive: () => {},
+  }
+
+  onClick = () => {
+    const { id } = this.props;
+    window.location = `/${id}`;
   }
 
   renderTitle = title => <Title key={title}>{title}</Title>
 
   render() {
-    const {
-      name, avatar, titles, onActive, active,
-    } = this.props;
+    const { name, avatar, titles } = this.props;
 
     return (
-      <Wrapper>
-        <Avatar src={avatar} onClick={onActive} active={active} />
-        <Name onClick={onActive}>{name}</Name>
+      <Wrapper onClick={this.onClick}>
+        <Avatar src={avatar} />
+        <Name>{name}</Name>
         {titles.map(this.renderTitle)}
       </Wrapper>
     );

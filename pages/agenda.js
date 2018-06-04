@@ -2,20 +2,24 @@ import React from 'react';
 import styled from 'styled-components';
 import withMenu from './Layout/withMenu';
 import DateTab from './Agenda/DateTab';
-import LocationTab from './Agenda/LocationTab';
 import AgendaItem from './Agenda/AgendaItem';
-// import data from './Agenda/data.json';
+import agendas from './Agenda/data.json';
 import withFedcBackground from './Layout/withFedcBackground';
 
-const data = {
-  14: { '10 F': [], '11 F': [], 'Pitch Space': [] },
-  15: { 'Developer Workshops': [], 'Designer Workshops': [] },
-};
-
 const Wrapper = styled.div`
-  width: 62rem;
-  margin: 9.88rem auto 13.19rem auto;
+  max-width: 62rem;
+  margin: 0 auto 13.19rem auto;
   flex-grow: 1;
+
+  @media (max-width: 66rem){
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 `;
 
 const Title = styled.h1`
@@ -27,99 +31,27 @@ const Title = styled.h1`
 
 const Main = styled.div`
   display: flex;
-`;
-
-const Left = styled.div``;
-const Right = styled.div`
-  flex-grow: 1;
-  margin-left: 4rem;
-`;
-
-const LocationTabContainer = styled.div`
-  margin-top: 1.9rem;
-  margin-left: 7.2rem;
-  margin-bottom: 4rem;
-  display: flex;
+  flex-wrap: wrap;
 `;
 
 const AgendaItemContainer = styled.div``;
 
 class Agenda extends React.PureComponent {
-  constructor(props) {
-    super(props);
-
-    const dateTabs = Object.keys(data);
-    const locationTabs = Object.keys(data[dateTabs[0]]);
-
-    this.state = {
-      date: dateTabs[0],
-      location: locationTabs[0],
-    };
-  }
-
-  onChangDate = date => () => {
-    const location = Object.keys(data[date])[0];
-    this.setState({ date, location });
-  }
-
-  onChangeLocation = location => () => {
-    this.setState({ location });
-  }
-
   renderAgendaItem = (agenda, index) =>
     (<AgendaItem key={index} {...agenda} />)
 
-  renderDateTab = (date) => {
-    const { onChangDate } = this;
-    const { date: activeDate } = this.state;
-    return (
-      <DateTab
-        active={date === activeDate}
-        onClick={onChangDate(date)}
-        key={date}
-      >
-        {date}
-      </DateTab>
-    );
-  }
-
-  renderLocationTab = (location) => {
-    const { onChangeLocation } = this;
-    const { location: activeLocation } = this.state;
-    return (
-      <LocationTab
-        active={location === activeLocation}
-        onClick={onChangeLocation(location)}
-        key={location}
-      >
-        {location}
-      </LocationTab>
-    );
-  }
-
-
   render() {
-    const { renderDateTab, renderLocationTab, renderAgendaItem } = this;
-    const { date, location } = this.state;
-    const dateTabs = Object.keys(data);
-    const locationTabs = Object.keys(data[date]);
-    const agendas = data[date][location];
+    const { renderAgendaItem } = this;
 
     return (
       <Wrapper>
         <Title>AGENDA</Title>
         <Main>
-          <Left>
-            {dateTabs.map(renderDateTab)}
-          </Left>
-          <Right>
-            <LocationTabContainer>
-              {locationTabs.map(renderLocationTab)}
-            </LocationTabContainer>
-            <AgendaItemContainer>
-              {agendas.map(renderAgendaItem)}
-            </AgendaItemContainer>
-          </Right>
+          <DateTab>14</DateTab>
+          <AgendaItemContainer>
+            {agendas.map(renderAgendaItem)}
+          </AgendaItemContainer>
+          <DateTab>15</DateTab>
         </Main>
       </Wrapper>
     );
