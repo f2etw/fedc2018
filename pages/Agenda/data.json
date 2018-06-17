@@ -14,7 +14,7 @@
     "tags": []
   },
   {
-    "highlights": ["10F", "CN", "FrontEnd"],
+    "highlights": ["10F", "CH", "FrontEnd"],
     "title": "Path of web design modularization",
     "time": ["09:20", "10:00"],
     "speakers": [{
@@ -28,7 +28,7 @@
     "time": ["10:00", "16:00"]
   },
   {
-    "highlights": ["11F", "CN", "Design"],
+    "highlights": ["11F", "CH", "Design"],
     "title": "The Future of Visual Language: Storytelling with Data Visualization",
     "time": ["10:10", "10:50"],
     "speakers": [{
@@ -48,7 +48,7 @@
     ]
   },
   {
-    "highlights": ["10F", "CN", "FrontEnd"],
+    "highlights": ["10F", "CH", "FrontEnd"],
     "title": "10F - PureScript for JavaScript Developers",
     "time": ["10:10", "10:50"],
     "speakers": [{
@@ -85,7 +85,7 @@
     ]
   },
   {
-    "highlights": ["10F", "CN", "FrontEnd"],
+    "highlights": ["10F", "CH", "FrontEnd"],
     "title": "Learn Tensorflow.js in 30 minutes",
     "time": ["11:50", "12:30"],
     "speakers": [{
@@ -115,7 +115,7 @@
     ]
   },
   {
-    "highlights": ["10F", "CN", "Design"],
+    "highlights": ["10F", "CH", "Design"],
     "title": "Beyond Pixel - Design in Augmented Reality",
     "time": ["12:40", "13:20"],
     "speakers": [{
@@ -130,7 +130,7 @@
     ]
   },
   {
-    "highlights": ["11F", "CN", "FrontEnd"],
+    "highlights": ["11F", "CH", "FrontEnd"],
     "title": "Audio Visual Experiments in Modern Web",
     "time": ["13:30", "14:10"],
     "speakers": [{
@@ -139,7 +139,7 @@
     }]
   },
   {
-    "highlights": ["10F", "CN", "Design"],
+    "highlights": ["10F", "CH", "Design"],
     "title": "10 things I wish I knew about strategy design",
     "time": ["13:30", "14:10"],
     "speakers": [{
@@ -169,7 +169,7 @@
     ]
   },
   {
-    "highlights": ["10F", "CN", "Design"],
+    "highlights": ["10F", "CH", "Design"],
     "title": "Appreciating the multifaceted F2E from user experience to service design",
     "time": ["14:20", "15:30"],
     "speakers": [{
@@ -197,7 +197,7 @@
     ]
   },
   {
-    "highlights": ["10F", "CN", "Design"],
+    "highlights": ["10F", "CH", "Design"],
     "title": "The opportunities of Auto industry’s future: Travel service experience innovation",
     "time": ["15:10", "15:50"],
     "speakers": [{
