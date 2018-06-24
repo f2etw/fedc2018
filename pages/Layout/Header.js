@@ -47,25 +47,6 @@ const Menu = styled.div`
   }
 `;
 
-const MenuItem = styled.a`
-  line-height: 1.8rem;
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #02f694;
-  border-left: 2px solid #594a9d;
-  padding: 0 1.25rem;
-  cursor: pointer;
-  text-decoration: none;
-
-  &:hover {
-    color: #ffffff;
-  }
-
-  &:first-child {
-    border: none;
-  }
-`;
-
 class Header extends PureComponent {
   render() {
     const { toggleMenu, menuVisible } = this.props;
@@ -76,9 +57,7 @@ class Header extends PureComponent {
         <Content menuVisible={menuVisible}>
           <TopMenu>
             <WhichBurger onClick={toggleMenu} />
-            <Menu>
-              <MenuItem href="mailto:2018@fed.tw">Call For Sponsors</MenuItem>
-            </Menu>
+            <Menu />
           </TopMenu>
           <BuyTicket
             href="https://f2e.kktix.cc/events/fedc-2018"

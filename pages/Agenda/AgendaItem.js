@@ -171,7 +171,7 @@ export default class AgendaItem extends PureComponent {
           {_.map(items, ({
             highlights, title, speakers, tags,
           }) => (
-            <Item>
+            <Item key={title}>
               {highlights && (
                 <WrapHighlight>
                   {highlights.map(highlight => <Highlight>{highlight}</Highlight>)}
