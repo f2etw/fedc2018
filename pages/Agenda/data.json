@@ -304,7 +304,7 @@
         ]
       }]
     }, {
-      "time": ["16:10", "17:00"],
+      "time": ["16:10", "17:30"],
       "items": [{
         "highlights": ["11F", "CH", "FrontEnd", "Forum"],
         "title": "Future of the web: language, performance, visual interactive",
