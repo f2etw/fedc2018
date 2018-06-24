@@ -15,7 +15,16 @@
           "id": "daisuke_sakai",
           "name": "Daisuke Sakai"
         }],
-        "tags": []
+        "tags": [
+          "Design",
+          "Art",
+          "Technology"
+        ],
+        "descriptions": [
+          "Daisuke Sakai, co-founder of teamLab, speaks about the theme of ‘Relationships Among People', one of teamLab’s concepts which aims to explore a new relationship among people, and to make the presence of others a positive experience through digital art. Sakai will introduce such concept along with teamLab’s works.",
+          "teamLab was founded in 2001 as an interdisciplinary art collective whose expansive practice involves collaborations in the fields of art, technology and science, exploring the new relationships between people, and between people and the world in the information age. Artists, programmers, engineers, CG animators, mathematicians, architects, web and print graphic designers and editors form teamLab. Using technology to dissolve the boundaries between the physical and conceptual, and to propose new models of perception in the digital era, their work is immersive and interactive—focused on the themes of creativity, play, exploration, immersion, life, and fluidity.",
+          "teamLab has been the subject of numerous exhibitions at venues worldwide, including the vast exhibition “teamLab : Au-delà des limites” currently on view at La Villette in Paris."
+        ]
       }, {
         "highlights": ["10F", "CH", "FrontEnd"],
         "title": "Path of web design modularization",
@@ -23,7 +32,21 @@
           "id": "kevin_tu",
           "name": "屠澤寬 Jeremiah Kevin Tu"
         }],
-        "tags": []
+        "tags": [
+          "Design",
+          "Style guide",
+          "CSS",
+          "modularize",
+          "pattern design",
+          "atomic design"
+        ],
+        "descriptions": [
+          "There are too many techniques and theories on how to make your stylesheet cleaner and bleeds out from where it should be, but in the real world it's a different story.",
+          "The speaker will share his personal experience on:",
+          "- How to walk on the thin line between do things right and make everyone comfortable?",
+          "- How to use engineering philosophy to influence style guide?",
+          "- How do you use design pattern as a language to communicate between designer and engineer?"
+        ]
       }]
     },
     {
@@ -52,6 +75,11 @@
           "Art",
           "Visual Language",
           "Programming Art"
+        ],
+        "descriptions": [
+          "Visualization of all types of data is a highly effective used by researchers, journalists and artists, in order to communicate their findings and feelings.",
+          "It's not only an increasingly popular means of simplifying large datasets to the general publics, but also an unique angle of uncovering impressive truth to the specific professions.",
+          "Visualization is a powerful tool as a new language of storytelling. It has contributed to the evolving visual story of the future in many forms and in many cultures."
         ]
       }, {
         "highlights": ["10F", "CH", "FrontEnd"],
@@ -63,6 +91,10 @@
         "tags": [
           "Functional Programming",
           "PureScript"
+        ],
+        "descriptions": [
+          "函數式編程（Functional Programming）的技巧在 JavaScript 發展已有段時間： NodeJS 的 callback style、Array 的 map 和 reduce、Promise、Observable、以及 React 等都有函數式編程的觀念在其中。將邏輯封裝成函式這簡單的觀念，就可以完成許多強大的功能。",
+          "但 JavaScript 並非為函數式編程設計，缺乏 type system、 immutable data 等特性導致在 JavaScript 上使用函數式編程技巧變得冗長瑣碎。PureScript 能幫住我們解決這些問題，透過學習 PureScript，我們不僅能熟悉各種函數式編程的觀念，更能利用 PureScript 開發穩定且快速的產品。"
         ]
       }]
     },
@@ -84,6 +116,15 @@
           "Design thinking",
           "Experience design",
           "Prototyping"
+        ],
+        "descriptions": [
+          "Johny Vino is going to share comprehensive knowledge of Interaction design starting from, What is good interaction model means, What are interaction pattern we experience in real life?. How the world has changed by this digital interface and has a different type of interaction. What does mean micro-interaction?. How it affects the human behavior. How we can use interaction design to solve the real world problem.",
+          "- How to use the cognitive memory of user in interaction design.",
+          "- How micro interaction plays a vital role in the remembrance of app or company.  Example of tech companies used micro interaction to reach the financial goal and customer retention.",
+          "- How to start thinking about interaction design? What is the meaningful interaction versus animation?. What are types of interaction design",
+          "- How to use the mimic effect in interaction design.",
+          "- Why prototyping is essential, what are rules to follow while doing a prototype.",
+          "- How a developer can start doing micro interaction where they can find the resources. "
         ]
       }]
     },
@@ -100,6 +141,10 @@
           "Deep learning",
           "Tensorflow.js",
           "Deeplearn.js"
+        ],
+        "descriptions": [
+          "Applying Machine/Deep Learning to front-end has became a popular trend recently. In this speech, I will demonstrate the essence of Tensorflow.js.",
+          "I will start with pre-trained model and share my experience about some obstacles to porting Tensorflow / Keras / Caffe model. Therefore this speech is particularly suitable for those front-end programmers with entry level knowledge about Machine/Deep Learning."
         ]
       }]
     },
@@ -118,19 +163,26 @@
           "Animation",
           "CSS",
           "Finite State Machines"
+        ],
+        "descriptions": [
+          "Reactive animations are more than just timelines. They adapt and respond to user input, creating a lively, exciting, and meaningful user experience. However, these dynamic user interfaces can quickly become complex, especially as features are added. So how can we build them in a manageable, scaleable way?",
+          "Enter finite state machines (FSMs). In this session, we will explore how FSMs can organize app logic and choreograph complex, reactive animations with RxJS. These state machines can also be used to automatically generate visualizations of the logic, which enables us to observe the current app state and events in real time. There will be many demos highlighting these complex reactive animations, with resources to help you use them in your front-end projects today."
         ]
       }, {
         "highlights": ["10F", "CH", "Design"],
         "title": "Beyond Pixel - Design in Augmented Reality",
         "speakers": [{
           "id": "chris_chen",
-          "name": "Chris Chen"
+          "name": "陳偉仁 Chris Chen"
         }],
         "tags": [
           "AR",
           "Augmented Reality",
           "3D design",
           "UX"
+        ],
+        "descriptions": [
+          "As emerging technologies eg AR, VR, XR are taking off, designers’ job is no longer just tweaking the 2D pixels. Chris will share his experience on designing AR applications through side projects and case studies."
         ]
       }]
     },
@@ -142,7 +194,24 @@
         "speakers": [{
           "id": "vibert_thio",
           "name": "張欣嘉 Vibert Thio"
-        }]
+        }],
+        "tags": [
+          "Web Audio API",
+          "WebGL",
+          "Three.js",
+          "p5.js",
+          "Tone.js",
+          "Art and Technology",
+          "Audio Visual",
+          "Digital Art"
+        ],
+        "descriptions": [
+          "- web art",
+          "- audio & synthesis in front-end",
+          "- visual rendering in front-end",
+          "- real examples",
+          "- web as  media of art"
+        ]
       }, {
         "highlights": ["10F", "CH", "Design"],
         "title": "10 things I wish I knew about strategy design",
@@ -156,6 +225,10 @@
           "cocreationfordoingjobbetter",
           "stratagythinkinganddoing",
           "bettercollaborationwithpeople"
+        ],
+        "descriptions": [
+          "Strategy design? Sounds serious. What is it? Why do I care? How does that affect what I do? ",
+          "Diane will share her experience and learnings about strategy design in 3 different perspectives: as a engineer, as a business analyst, and as a service designer, and she will share how you can leverage the mindset, skills and tools to anticipate more in the process of strategy co-creation in your team and organization."
         ]
       }]
     },
@@ -172,6 +245,9 @@
           "Functional programming",
           "PureScript",
           "type-level programming"
+        ],
+        "descriptions": [
+          "In this talk, Justin will talk about PureScript and how many problems we solve can be generalized and solved safely using types -- not only to check individual implementations, but to derive implementations automatically using type-level information. Justin will show some examples of how problems we solve with error-prone manual approaches and buggy codegen can instead be solved first-class when using an advanced language like PureScript."
         ]
       }, {
         "highlights": ["10F", "CH", "Design"],
@@ -184,6 +260,11 @@
           "User Experience",
           "Service Design",
           "Service F2E"
+        ],
+        "descriptions": [
+          "F2E originated from the professionals handling front-end coding of webs in the internet era. They play an important role in the presentation and interaction of webs, and are the frontline uses encounter. Ｇood F2E can greatly improve the quality of user experience. ",
+          "When entering the era of new service design, the touch points between users and service are getting diverse. Not only digital user interface, but also a physical user interface, voice user interface, and even human-to-human contacts are included in the trend of online-offline integration. ",
+          "Facing new service system, we might redefine F2E as engineers who utilize service persons, physical environments, digital tools and environments to establish service systems. Therefore, the jobs of F2E are more diverse and splendid. This talk will share our near-future imagination for service F2E."
         ]
       }]
     },
@@ -200,6 +281,9 @@
           "Tooling",
           "productivity",
           "javascript"
+        ],
+        "descriptions": [
+          "Get up to speed with the latest features shipping in Chrome DevTools. Discover new features aimed at simplifying asynchronous debugging and working across threads that will be particularly handy as the web goes multithreaded in 2018. Learn how to use console aggregation to streamline development, and take advantage of Network Interception to inspect or modify connections made by your app."
         ]
       }, {
         "highlights": ["10F", "CH", "Design"],
@@ -214,6 +298,9 @@
           "Experience Thinking",
           "Experience Strategy",
           "Auto Experience Innovation"
+        ],
+        "descriptions": [
+          "In the era of experience economy, customer has diverse driving scenarios & needs, traditional car companies can not just rely on the car itself, but also have to extend & connect the experience of customers values. This is the only opportunities that  traditional car companies can reconnect customers is have to trying hard to deeply understand customers & redefine brand strategy from product to services."
         ]
       }]
     }, {

@@ -74,6 +74,7 @@ const Title = styled.h2`
 
 const Tags = styled.p`
   display: block;
+  margin-top: .6rem;
   margin-bottom: 1.4rem;
 `;
 
@@ -139,6 +140,12 @@ const Item = styled.div`
   }
 `;
 
+const Description = styled.div`
+  color: #C2B9EE;
+  font-size: 1rem;
+  line-height: 1.3rem;
+`;
+
 export default class AgendaItem extends PureComponent {
   static propTypes = {
     time: PropTypes.arrayOf(PropTypes.string),
@@ -169,7 +176,7 @@ export default class AgendaItem extends PureComponent {
         <Divider />
         <Content>
           {_.map(items, ({
-            highlights, title, speakers, tags,
+            highlights, title, speakers, descriptions, tags,
           }) => (
             <Item key={title}>
               {highlights && (
@@ -184,6 +191,13 @@ export default class AgendaItem extends PureComponent {
                   <Name>{speaker.name}</Name>
                 </Speaker>
               ))}
+              {descriptions && (
+                <React.Fragment>
+                  {_.map(descriptions, description => (
+                    <Description>{description}</Description>
+                  ))}
+                </React.Fragment>
+              )}
               {tags && <Tags>{tags.map(this.renderTag)}</Tags>}
             </Item>
           ))}
