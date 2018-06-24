@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -130,24 +131,23 @@ const Highlight = styled.div`
   border: 1px solid #02f694;
 `;
 
+const Item = styled.div`
+  margin-bottom: 3rem;
+
+  &:last-child {
+    margin-bottom: 1rem;
+  }
+`;
+
 export default class AgendaItem extends PureComponent {
   static propTypes = {
-    title: PropTypes.string,
-    speakers: PropTypes.arrayOf(PropTypes.shape({
-      name: PropTypes.string,
-      avatar: PropTypes.string,
-    })),
     time: PropTypes.arrayOf(PropTypes.string),
-    tags: PropTypes.arrayOf(PropTypes.string),
-    highlights: PropTypes.arrayOf(PropTypes.string),
+    items: PropTypes.arrayOf(PropTypes.shape()),
   }
 
-  static defaultProps={
-    title: '',
-    speakers: null,
+  static defaultProps = {
     time: [],
-    tags: [],
-    highlights: [],
+    items: [],
   }
 
   onClick = (id) => {
@@ -157,9 +157,7 @@ export default class AgendaItem extends PureComponent {
   renderTag = tag => (<Tag key={tag}>{tag}</Tag>)
 
   render() {
-    const {
-      highlights, title, speakers, time, tags,
-    } = this.props;
+    const { time, items } = this.props;
     const [start, end] = time;
 
     return (
@@ -170,19 +168,25 @@ export default class AgendaItem extends PureComponent {
         </Time>
         <Divider />
         <Content>
-          {highlights && (
-            <WrapHighlight>
-              {highlights.map(highlight => <Highlight>{highlight}</Highlight>)}
-            </WrapHighlight>
-          )}
-          <Title>{title}</Title>
-          {speakers && speakers.map(speaker => (
-            <Speaker onClick={() => this.onClick(speaker.id)}>
-              <Avatar src={`/static/speaker/${speaker.id}.png`} />
-              <Name>{speaker.name}</Name>
-            </Speaker>
+          {_.map(items, ({
+            highlights, title, speakers, tags,
+          }) => (
+            <Item>
+              {highlights && (
+                <WrapHighlight>
+                  {highlights.map(highlight => <Highlight>{highlight}</Highlight>)}
+                </WrapHighlight>
+              )}
+              <Title>{title}</Title>
+              {speakers && speakers.map(speaker => (
+                <Speaker onClick={() => this.onClick(speaker.id)}>
+                  <Avatar src={`/static/speaker/${speaker.id}.png`} />
+                  <Name>{speaker.name}</Name>
+                </Speaker>
+              ))}
+              {tags && <Tags>{tags.map(this.renderTag)}</Tags>}
+            </Item>
           ))}
-          {tags && <Tags>{tags.map(this.renderTag)}</Tags>}
         </Content>
       </Wrapper>
     );

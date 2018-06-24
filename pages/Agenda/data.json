@@ -1,215 +1,303 @@
-[
-  {
-    "title": "Openning",
-    "time": ["09:00", "09:20"]
-  },
-  {
-    "highlights": ["11F", "EN", "Design"],
-    "title": "Art collective teamLab’s universal concept",
-    "time": ["09:20", "10:00"],
-    "speakers": [{
-      "id": "daisuke_sakai",
-      "name": "Daisuke Sakai"
-    }],
-    "tags": []
-  },
-  {
-    "highlights": ["10F", "CH", "FrontEnd"],
-    "title": "Path of web design modularization",
-    "time": ["09:20", "10:00"],
-    "speakers": [{
-      "id": "kevin_tu",
-      "name": "屠澤寬 Jeremiah Kevin Tu"
-    }],
-    "tags": []
-  },
-  {
-    "title": "Pitch Space",
-    "time": ["10:00", "16:00"]
-  },
-  {
-    "highlights": ["11F", "CH", "Design"],
-    "title": "The Future of Visual Language: Storytelling with Data Visualization",
-    "time": ["10:10", "10:50"],
-    "speakers": [{
-      "id": "mengchih_chiang",
-      "name": "江孟芝 MengChih Chiang"
-    }],
-    "tags": [
-      "Data",
-      "Visualization",
-      "Data Visualization",
-      "Infographic",
-      "Storytelling",
-      "Design",
-      "Art",
-      "Visual Language",
-      "Programming Art"
-    ]
-  },
-  {
-    "highlights": ["10F", "CH", "FrontEnd"],
-    "title": "10F - PureScript for JavaScript Developers",
-    "time": ["10:10", "10:50"],
-    "speakers": [{
-      "id": "ct_wu",
-      "name": "CT Wu"
-    }],
-    "tags": [
-      "Functional Programming",
-      "PureScript"
-    ]
-  },
-  {
-    "highlights": ["10F Registration"],
-    "title": "Lunch",
-    "time": ["10:50", "12:40"]
-  },
-  {
-    "highlights": ["11F", "EN", "Design"],
-    "title": "Meaningful Micro-Interaction in HCI",
-    "time": ["11:00", "11:40"],
-    "speakers": [{
-      "id": "johny_vino",
-      "name": "Johny Vino"
-    }],
-    "tags": [
-      "HCI",
-      "Interaction design",
-      "Micro-Interaction",
-      "UI",
-      "UX",
-      "Design thinking",
-      "Experience design",
-      "Prototyping"
-    ]
-  },
-  {
-    "highlights": ["10F", "CH", "FrontEnd"],
-    "title": "Learn Tensorflow.js in 30 minutes",
-    "time": ["11:50", "12:30"],
-    "speakers": [{
-      "id": "blue_chen",
-      "name": "Blue Chen"
-    }],
-    "tags": [
-      "Deep learning",
-      "Tensorflow.js",
-      "Deeplearn.js"
-    ]
-  },
-  {
-    "highlights": ["11F", "EN", "FrontEnd"],
-    "title": "The (Finite) State of Reactive Animations",
-    "time": ["12:40", "13:20"],
-    "speakers": [{
-      "id": "david_khourshid",
-      "name": "David Khourshid"
-    }],
-    "tags": [
-      "Functional",
-      "Reactive",
-      "Animation",
-      "CSS",
-      "Finite State Machines"
-    ]
-  },
-  {
-    "highlights": ["10F", "CH", "Design"],
-    "title": "Beyond Pixel - Design in Augmented Reality",
-    "time": ["12:40", "13:20"],
-    "speakers": [{
-      "id": "chris_chen",
-      "name": "Chris Chen"
-    }],
-    "tags": [
-      "AR",
-      "Augmented Reality",
-      "3D design",
-      "UX"
-    ]
-  },
-  {
-    "highlights": ["11F", "CH", "FrontEnd"],
-    "title": "Audio Visual Experiments in Modern Web",
-    "time": ["13:30", "14:10"],
-    "speakers": [{
-      "id": "vibert_thio",
-      "name": "張欣嘉 Vibert Thio"
-    }]
-  },
-  {
-    "highlights": ["10F", "CH", "Design"],
-    "title": "10 things I wish I knew about strategy design",
-    "time": ["13:30", "14:10"],
-    "speakers": [{
-      "id": "diane_shen",
-      "name": "沈美君 Diane Shen"
-    }],
-    "tags": [
-      "strategydesign",
-      "whyshouldIcare",
-      "cocreationfordoingjobbetter",
-      "stratagythinkinganddoing",
-      "bettercollaborationwithpeople"
-    ]
-  },
-  {
-    "highlights": ["11F", "EN", "FrontEnd"],
-    "title": "Type-safe, type-level, type-driven solutions with PureScript",
-    "time": ["14:20", "15:00"],
-    "speakers": [{
-      "id": "​​justin_woo",
-      "name": "​​Justin Woo"
-    }],
-    "tags": [
-      "Functional programming",
-      "PureScript",
-      "type-level programming"
-    ]
-  },
-  {
-    "highlights": ["10F", "CH", "Design"],
-    "title": "Appreciating the multifaceted F2E from user experience to service design",
-    "time": ["14:20", "15:30"],
-    "speakers": [{
-      "id": "hsienhui_tang",
-      "name": "唐玄輝 Hsien-Hui Tang"
-    }],
-    "tags": [
-      "User Experience",
-      "Service Design",
-      "Service F2E"
-    ]
-  },
-  {
-    "highlights": ["11F", "EN", "FrontEnd"],
-    "title": "A look at 2018's Chrome DevTools",
-    "time": ["15:10", "15:50"],
-    "speakers": [{
-      "id": "paul_irish",
-      "name": "​​Paul Irish"
-    }],
-    "tags": [
-      "Tooling",
-      "productivity",
-      "javascript"
-    ]
-  },
-  {
-    "highlights": ["10F", "CH", "Design"],
-    "title": "The opportunities of Auto industry’s future: Travel service experience innovation",
-    "time": ["15:10", "15:50"],
-    "speakers": [{
-      "id": "nelson_kuo",
-      "name": "郭正澔 Nelson Kuo"
-    }],
-    "tags": [
-      "Travel Experience",
-      "Service Design",
-      "Experience Thinking",
-      "Experience Strategy",
-      "Auto Experience Innovation"
-    ]
-  }
-]
+{
+  "14": [
+    {
+      "time": ["09:00", "09:20"],
+      "items": [{
+        "title": "Openning"
+      }]
+    },
+    {
+      "time": ["09:20", "10:00"],
+      "items": [{
+        "highlights": ["11F", "EN", "Design"],
+        "title": "Art collective teamLab’s universal concept",
+        "speakers": [{
+          "id": "daisuke_sakai",
+          "name": "Daisuke Sakai"
+        }],
+        "tags": []
+      }, {
+        "highlights": ["10F", "CH", "FrontEnd"],
+        "title": "Path of web design modularization",
+        "speakers": [{
+          "id": "kevin_tu",
+          "name": "屠澤寬 Jeremiah Kevin Tu"
+        }],
+        "tags": []
+      }]
+    },
+    {
+      "time": ["10:00", "16:00"],
+      "items": [{
+        "highlights": ["11F Pitch Space", "CH / EN"],
+        "title": "Pitch Space"
+      }]
+    },
+    {
+      "time": ["10:10", "10:50"],
+      "items": [{
+        "highlights": ["11F", "CH", "Design"],
+        "title": "The Future of Visual Language: Storytelling with Data Visualization",
+        "speakers": [{
+          "id": "mengchih_chiang",
+          "name": "江孟芝 MengChih Chiang"
+        }],
+        "tags": [
+          "Data",
+          "Visualization",
+          "Data Visualization",
+          "Infographic",
+          "Storytelling",
+          "Design",
+          "Art",
+          "Visual Language",
+          "Programming Art"
+        ]
+      }, {
+        "highlights": ["10F", "CH", "FrontEnd"],
+        "title": "10F - PureScript for JavaScript Developers",
+        "speakers": [{
+          "id": "ct_wu",
+          "name": "CT Wu"
+        }],
+        "tags": [
+          "Functional Programming",
+          "PureScript"
+        ]
+      }]
+    },
+    {
+      "time": ["11:00", "11:40"],
+      "items": [{
+        "highlights": ["11F", "EN", "Design"],
+        "title": "Meaningful Micro-Interaction in HCI",
+        "speakers": [{
+          "id": "johny_vino",
+          "name": "Johny Vino"
+        }],
+        "tags": [
+          "HCI",
+          "Interaction design",
+          "Micro-Interaction",
+          "UI",
+          "UX",
+          "Design thinking",
+          "Experience design",
+          "Prototyping"
+        ]
+      }]
+    },
+    {
+      "time": ["11:50", "12:30"],
+      "items": [{
+        "highlights": ["10F", "CH", "FrontEnd"],
+        "title": "Learn Tensorflow.js in 30 minutes",
+        "speakers": [{
+          "id": "blue_chen",
+          "name": "Blue Chen"
+        }],
+        "tags": [
+          "Deep learning",
+          "Tensorflow.js",
+          "Deeplearn.js"
+        ]
+      }]
+    },
+    {
+      "time": ["12:40", "13:20"],
+      "items": [{
+        "highlights": ["11F", "EN", "FrontEnd"],
+        "title": "The (Finite) State of Reactive Animations",
+        "speakers": [{
+          "id": "david_khourshid",
+          "name": "David Khourshid"
+        }],
+        "tags": [
+          "Functional",
+          "Reactive",
+          "Animation",
+          "CSS",
+          "Finite State Machines"
+        ]
+      }, {
+        "highlights": ["10F", "CH", "Design"],
+        "title": "Beyond Pixel - Design in Augmented Reality",
+        "speakers": [{
+          "id": "chris_chen",
+          "name": "Chris Chen"
+        }],
+        "tags": [
+          "AR",
+          "Augmented Reality",
+          "3D design",
+          "UX"
+        ]
+      }]
+    },
+    {
+      "time": ["13:30", "14:10"],
+      "items": [{
+        "highlights": ["11F", "CH", "FrontEnd"],
+        "title": "Audio Visual Experiments in Modern Web",
+        "speakers": [{
+          "id": "vibert_thio",
+          "name": "張欣嘉 Vibert Thio"
+        }]
+      }, {
+        "highlights": ["10F", "CH", "Design"],
+        "title": "10 things I wish I knew about strategy design",
+        "speakers": [{
+          "id": "diane_shen",
+          "name": "沈美君 Diane Shen"
+        }],
+        "tags": [
+          "strategydesign",
+          "whyshouldIcare",
+          "cocreationfordoingjobbetter",
+          "stratagythinkinganddoing",
+          "bettercollaborationwithpeople"
+        ]
+      }]
+    },
+    {
+      "time": ["14:20", "15:00"],
+      "items": [{
+        "highlights": ["11F", "EN", "FrontEnd"],
+        "title": "Type-safe, type-level, type-driven solutions with PureScript",
+        "speakers": [{
+          "id": "​​justin_woo",
+          "name": "​​Justin Woo"
+        }],
+        "tags": [
+          "Functional programming",
+          "PureScript",
+          "type-level programming"
+        ]
+      }, {
+        "highlights": ["10F", "CH", "Design"],
+        "title": "Appreciating the multifaceted F2E from user experience to service design",
+        "speakers": [{
+          "id": "hsienhui_tang",
+          "name": "唐玄輝 Hsien-Hui Tang"
+        }],
+        "tags": [
+          "User Experience",
+          "Service Design",
+          "Service F2E"
+        ]
+      }]
+    },
+    {
+      "time": ["15:10", "15:50"],
+      "items": [{
+        "highlights": ["11F", "EN", "FrontEnd"],
+        "title": "A look at 2018's Chrome DevTools",
+        "speakers": [{
+          "id": "paul_irish",
+          "name": "​​Paul Irish"
+        }],
+        "tags": [
+          "Tooling",
+          "productivity",
+          "javascript"
+        ]
+      }, {
+        "highlights": ["10F", "CH", "Design"],
+        "title": "The opportunities of Auto industry’s future: Travel service experience innovation",
+        "speakers": [{
+          "id": "nelson_kuo",
+          "name": "郭正澔 Nelson Kuo"
+        }],
+        "tags": [
+          "Travel Experience",
+          "Service Design",
+          "Experience Thinking",
+          "Experience Strategy",
+          "Auto Experience Innovation"
+        ]
+      }]
+    }, {
+      "time": ["16:10", "17:00"],
+      "items": [{
+        "highlights": ["11F", "CH", "FrontEnd", "Forum"],
+        "title": "Future of the web: language, performance, visual interactive",
+        "speakers": [{
+          "id": "liangbin_hsueh",
+          "name": "Liang-Bin Hsueh (hlb)"
+        }, {
+          "id": "kirby_wu",
+          "name": "Kirby Wu"
+        }, {
+          "id": "david_khourshid",
+          "name": "David Khourshid"
+        }, {
+          "id": "vibert_thio",
+          "name": "張欣嘉 Vibert Thio"
+        }],
+        "tags": []
+      }, {
+        "highlights": ["10F", "CH", "Design", "Forum"],
+        "title": "Future progressive of Design: for experience and interaction",
+        "speakers": [{
+          "id": "chloe_jiang",
+          "name": "江逸情 Chloe Jiang"
+        }, {
+          "id": "daisuke_sakai",
+          "name": "Daisuke Sakai"
+        }, {
+          "id": "nelson_kuo",
+          "name": "郭正澔 Nelson Kuo"
+        }],
+        "tags": []
+      }]
+    }
+  ],
+  "15": [
+    {
+      "time": ["09:00", "12:00"],
+      "items": [{
+        "highlights": ["AppWorks School", "CH / EN", "Design", "Workshop"],
+        "title": "Kickstart of micro-Interaction",
+        "speakers": [{
+          "id": "johny_vino",
+          "name": "Johny Vino"
+        }],
+        "tags": []
+      }, {
+        "highlights": ["AppWorks School", "CH", "FrontEnd", "Workshop"],
+        "title": "AMP: Accelerated Mobile Page",
+        "speakers": [{
+          "id": "eric_chou",
+          "name": "周鴻仁 (Eric Chou)"
+        }, {
+          "id": "ted_xu",
+          "name": "許承德 Ted"
+        }, {
+          "id": "mark_wu",
+          "name": "吳自勝 Mark Wu"
+        }],
+        "tags": []
+      }]
+    },
+    {
+      "time": ["13:00", "16:00"],
+      "items": [{
+        "highlights": ["AppWorks School", "CH", "Design", "Workshop"],
+        "title": "Strategy design bootcamp for designers and developers",
+        "speakers": [{
+          "id": "diane_shen",
+          "name": "沈美君 Diane Shen"
+        }],
+        "tags": []
+      }, {
+        "highlights": ["AppWorks School", "CH", "FrontEnd", "Workshop"],
+        "title": "一次搞懂 GraphQL 基本應用與未來潛力",
+        "speakers": [{
+          "id": "jeremy_lu",
+          "name": "Jeremy Lu"
+        }],
+        "tags": []
+      }]
+    }
+  ]
+}

@@ -30,8 +30,17 @@ const Title = styled.h1`
 `;
 
 const Main = styled.div`
-  display: flex;
   flex-wrap: wrap;
+`;
+
+const Lunch = styled.div`
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+`;
+
+const Note = styled.div`
+  font-size: 1rem;
+  margin-bottom: 3rem;
 `;
 
 const AgendaItemContainer = styled.div``;
@@ -43,15 +52,22 @@ class Agenda extends React.PureComponent {
   render() {
     const { renderAgendaItem } = this;
 
+    const note = 'Starts at 10:50 continued 110 min, but have talks and pitch at the same time, you can self-planning your times.';
+
     return (
       <Wrapper>
         <Title>AGENDA</Title>
         <Main>
           <DateTab>14</DateTab>
+          <Lunch>Lunch: 10:50 ~ 12:40 at 10F Registration</Lunch>
+          <Note>{note}</Note>
           <AgendaItemContainer>
-            {agendas.map(renderAgendaItem)}
+            {agendas['14'].map(renderAgendaItem)}
           </AgendaItemContainer>
           <DateTab>15</DateTab>
+          <AgendaItemContainer>
+            {agendas['15'].map(renderAgendaItem)}
+          </AgendaItemContainer>
         </Main>
       </Wrapper>
     );
