@@ -8,6 +8,7 @@ import Date from '../components/Date';
 import Location from '../components/Location';
 import BuyTicket from '../components/BuyTicket';
 import sponsors from './Sponsors/data.json';
+import contributors from './Contributors/data.json';
 import withFedcBackground from './Layout/withFedcBackground';
 
 const Wrapper = styled.div`
@@ -49,7 +50,7 @@ const Note = styled.div`
 
 const AgendaItemContainer = styled.div``;
 
-const Sponsors = styled(Title)`
+const SubTitle = styled(Title)`
   margin-top: 3rem;
 `;
 
@@ -133,6 +134,12 @@ const EventLocation = styled(Location)`
   }
 `;
 
+const Contributors = styled.div`
+  line-height: 24px;
+  margin-top: 1rem;
+  color: #C2B9EE;
+`;
+
 class Agenda extends React.PureComponent {
   renderAgendaItem = (agenda, index) =>
     (<AgendaItem key={index} {...agenda} />)
@@ -170,7 +177,7 @@ class Agenda extends React.PureComponent {
             {agendas['15'].map(renderAgendaItem)}
           </AgendaItemContainer>
         </Main>
-        <Sponsors>SPONSORS</Sponsors>
+        <SubTitle>SPONSORS</SubTitle>
         <SponsorsMain>
           <SponsorType>Activist</SponsorType>
           <div>
@@ -197,6 +204,11 @@ class Agenda extends React.PureComponent {
             ))}
           </div>
         </SponsorsMain>
+        <SubTitle>CONTRIBUTORS</SubTitle>
+        <div>(Sort by name)</div>
+        <Contributors>
+          {_.sortBy(contributors).join('、')}
+        </Contributors>
       </Wrapper>
     );
   }
