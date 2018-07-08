@@ -52,6 +52,7 @@ const AgendaItemContainer = styled.div``;
 
 const SubTitle = styled(Title)`
   margin-top: 3rem;
+  letter-spacing: .5rem;
 `;
 
 const SponsorType = styled.h3`
@@ -67,7 +68,12 @@ const SponsorsMain = styled(Main)`
 `;
 
 const Img = styled.img`
-  max-width: 100%;
+  max-width: 18rem;
+  width: 100%;
+
+  @media (min-width: 600px) {
+    max-width: 14rem;
+  };
 `;
 
 const Header = styled.div`

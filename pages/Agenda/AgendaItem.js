@@ -123,6 +123,7 @@ const Name = styled.div`
 
 const WrapHighlight = styled.div`
   display: flex;
+  flex-wrap: wrap;
 `;
 
 const Highlight = styled.div`
