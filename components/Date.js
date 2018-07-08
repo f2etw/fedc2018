@@ -22,8 +22,8 @@ const Year = styled.div`
   }
 `;
 
-const Date = () => (
-  <time dateTime="2018-07-17 09:00">
+const Date = props => (
+  <time dateTime="2018-07-17 09:00" {...props}>
     <Month>14 JUL&nbsp;</Month>
     <Year>2018</Year>
   </time>

@@ -14,8 +14,8 @@ const English = styled.div`
   margin-top: 0.5rem;
 `;
 
-const Location = () => (
-  <div>
+const Location = props => (
+  <div {...props}>
     <Chinese>張榮發國際會議中心</Chinese>
     <English>Evergreen International Convention Center</English>
   </div>

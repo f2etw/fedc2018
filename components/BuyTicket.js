@@ -42,7 +42,13 @@ const BuyTicketLink = styled.a`
 class BuyTicket extends PureComponent {
   render() {
     return (
-      <BuyTicketLink aria-label="Buy Ticket" {...this.props}>
+      <BuyTicketLink
+        aria-label="Buy Ticket"
+        href="https://f2e.kktix.cc/events/fedc-2018"
+        target="_blank"
+        rel="noopener noreferrer"
+        {...this.props}
+      >
         <SVG xmlns="http://www.w3.org/2000/svg" viewBox="0 0 203 63">
           <PathFill
             d="M1 41a9 9 0 0 0 0-18V7a5 5 0 0 1 5-5h190a5 5 0 0 1 5 5v50a5 5 0 0 1-5 5H6a5 5 0 0 1-5-5V41z"

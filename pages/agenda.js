@@ -1,10 +1,12 @@
 import _ from 'lodash';
 import React from 'react';
 import styled from 'styled-components';
-import withMenu from './Layout/withMenu';
 import DateTab from './Agenda/DateTab';
 import AgendaItem from './Agenda/AgendaItem';
 import agendas from './Agenda/data.json';
+import Date from '../components/Date';
+import Location from '../components/Location';
+import BuyTicket from '../components/BuyTicket';
 import sponsors from './Sponsors/data.json';
 import withFedcBackground from './Layout/withFedcBackground';
 
@@ -67,6 +69,70 @@ const Img = styled.img`
   max-width: 100%;
 `;
 
+const Header = styled.div`
+  display: flex;
+  margin: 2rem 0 3rem 0;
+  flex-wrap: wrap;
+`;
+
+const Ticket = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+`;
+
+const LogoWrap = styled.div`
+  width: 200px;
+  flex-grow: 1;
+`;
+
+const Logo = styled.div`
+  width: 220px;
+  height: 220px;
+  background-image: url('/static/logo.png');
+  background-size: 220px;
+  margin: 0 auto;
+`;
+
+const Information = styled.div`
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  flex-basis: 600px;
+`;
+
+const Event = styled.div`
+  flex-grow: 1;
+  justify-content: flex-end;
+  align-items: flex-end;
+  @media (min-width: 600px) {
+    display: flex;
+  };
+`;
+
+const EventDate = styled(Date)`
+  padding-right: 0.875rem;
+`;
+
+const EventLocation = styled(Location)`
+  position: relative;
+  margin-top: 1rem;
+
+  @media (min-width: 600px) {
+    padding-left: 0.875rem;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -2px;
+      width: 2px;
+      height: 100%;
+      background-color: #594a9d;
+      border-radius: 2px;
+    }
+  }
+`;
+
 class Agenda extends React.PureComponent {
   renderAgendaItem = (agenda, index) =>
     (<AgendaItem key={index} {...agenda} />)
@@ -78,7 +144,20 @@ class Agenda extends React.PureComponent {
 
     return (
       <Wrapper>
-        <Title>AGENDA</Title>
+        <Header>
+          <LogoWrap>
+            <Logo />
+          </LogoWrap>
+          <Information>
+            <Ticket>
+              <BuyTicket />
+            </Ticket>
+            <Event>
+              <EventDate />
+              <EventLocation />
+            </Event>
+          </Information>
+        </Header>
         <Main>
           <DateTab>14</DateTab>
           <Lunch>Lunch: 10:50 ~ 12:40 at 10F Registration</Lunch>
@@ -123,4 +202,4 @@ class Agenda extends React.PureComponent {
   }
 }
 
-export default withMenu(withFedcBackground(Agenda));
+export default withFedcBackground(Agenda);

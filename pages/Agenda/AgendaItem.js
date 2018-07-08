@@ -57,7 +57,7 @@ const Divider = styled.div`
   }
 
   @media (max-width: 30rem){
-    margin-left: 0.79rem;
+    margin-left: 1.39rem;
     margin-right: 0.79rem;
   }
 `;
