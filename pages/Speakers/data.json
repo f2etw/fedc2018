@@ -117,5 +117,92 @@
       "Dr. Hsien-Hui Tang is a professor and host of Design Information & Thinking Lab in the National University of Taiwan of Science and Technology. He was trained as an industrial designer, receiving his Phd in design cognition at Key Center of Design Computing and Cognition in the faculty of Architecture at The University of Sydney. His interest lies in both research and practice in design, and has NSC project, journal publication, industry collaborative design project, and related international events every year. He intends to use the research results as the foundation to improve design practice abilities. Research interests include design thinking, user experience, multidisciplinary collaboration, and design education.",
       "Multiple workshops on scenarios and design thinking have been organized and hosted by him, including NTU, NTUST, CGU, TDC, CPC, ITRI, and Advantech, for human-centered innovative collaborative design. His recent projects focus on technology enabled UX design projects. The results received more than ten international and domestic design awards, including IF, Reddot, and etc."
     ]
+  },
+  {
+    "id": "heng_sung",
+    "avatar": "/static/speaker/heng_sung.png",
+    "name": "宋恆 Heng Sung",
+    "title": [
+      "如牧創新有限公司  RUMU Innovation Ltd. 總監 Director"
+    ],
+    "introductions": [
+      "Heng Sung started his dedication to digital interactive and media art in 2006. He had been invited to many phenomenal art activities like Beijing Summer Digi-Entmt. Fest., 404 international Fest., Brazil FILE PRIX LUX, Argentina TSONAMI Buenos Aires Int'l. Sound Fest..",
+      "Sung founded Rumu Innovation Ltd. in 2017, integrating the interactive tech and aesthetic sense. Their service covers digital interactive marketing, education and entertainment art. Recently they focus business on AR, VR and MR interactive experience, bringing new creativity to everyone."
+    ]
+  },
+  {
+    "id": "daisuke_sakai",
+    "avatar": "/static/speaker/daisuke_sakai.png",
+    "name": "Daisuke Sakai 堺大輔",
+    "title": [
+      "Co-founder of teamLab Inc."
+    ],
+    "introductions": [
+      "Born in Sapporo, Hokkaido, Japan in 1978. Graduated from Department of Mechanical and Information Engineering, University of Tokyo, Graduate school of interdisciplinary information, University of Tokyo. Studied wearable remote control system of humanoid robot at university."
+    ]
+  },
+  {
+    "id": "daisuke_sakai",
+    "avatar": "/static/speaker/daisuke_sakai.png",
+    "name": "Daisuke Sakai 堺大輔",
+    "title": [
+      "Co-founder of teamLab Inc."
+    ],
+    "introductions": [
+      "Born in Sapporo, Hokkaido, Japan in 1978. Graduated from Department of Mechanical and Information Engineering, University of Tokyo, Graduate school of interdisciplinary information, University of Tokyo. Studied wearable remote control system of humanoid robot at university."
+    ]
+  },
+  {
+    "id": "liangbin_hsueh",
+    "avatar": "/static/speaker/liangbin_hsueh.png",
+    "name": "Liang-Bin Hsueh (hlb)",
+    "title": [
+      "Product Director of cacaFly Inc."
+    ],
+    "introductions": [
+      "目前任職於數位廣告公司，負責建構文章推薦外掛服務，並且透過機械學習預測用戶行為。多年前熱衷於各種前端技術推展，並且為了方便辦活動弄了一套活動平台。是個天天都會寫程式的 PM。"
+    ]
+  },
+  {
+    "id": "kirby_wu",
+    "avatar": "/static/speaker/kirby_wu.png",
+    "name": "Kirby Wu",
+    "title": [
+      "Founder of PlotDB Ltd."
+    ],
+    "introductions": [
+      "Founder of PlotDB, loading.io and cofounder of g0v.tw. Co-organizer of Hacks/Hackers Taipei. Adjunct Instructor for “New Media Techniques and Design” in Fu Jen Catholic University, and new media advisory committee of PTS Foundation. Specialized in data visualization, civic tech and web technologies, and also an amateur photographer."
+    ]
+  },
+  {
+    "id": "paul_irish",
+    "avatar": "/static/speaker/paul_irish.png",
+    "name": "Paul Irish",
+    "title": [
+      "Software Engineer, Google"
+    ],
+    "introductions": [
+      "Paul Irish is a front-end developer who loves the web. He works on Lighthouse, Chrome DevTools, and performance metrics. A long time ago, he created projects like Modernizr, HTML5 Boilerplate, and Yeoman."
+    ]
+  },
+  {
+    "id": "justin_woo",
+    "avatar": "/static/speaker/justin_woo.png",
+    "name": "Justin Woo",
+    "title": [],
+    "introductions": [
+      "Justin is a former materials science lab rat who now spends his time writing PureScript for fun and for work. He lives in Finland as a result of being Twitter friends with André Staltz through talking about Cycle.js. Nowadays, he is most well-known for posting programming memes on Twitter and talking about type-level programming in PureScript to solve a variety of problems, from JSON deserialization to type-safe templating with Symbols and Records, refinement types, and more.",
+      "Being an immigrant Korean-American, Justin speaks primarily English, but also speaks some amount of Japanese and Korean. Despite having lived now in the land of Moomin for two years, Justin still speaks very little of the Nordic languages, and has even less skill of Chinese."
+    ]
+  },
+  {
+    "id": "chloe_jiang",
+    "avatar": "/static/speaker/chloe_jiang.png",
+    "name": "江逸情 Chloe Jiang",
+    "title": [],
+    "introductions": [
+      "Chloe is an Uxer with a multi-disciplinary background. She has a passion for people, new tech, traveling, and also a believer in design creates a better world. Most of her time is spent on exploring (both in & out) and learning.",
+      "Get in touch: chloejiang8@gmail.com."
+    ]
   }
 ]

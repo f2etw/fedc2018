@@ -334,6 +334,9 @@
         }, {
           "id": "nelson_kuo",
           "name": "郭正澔 Nelson Kuo"
+        }, {
+          "id": "heng_sung",
+          "name": "宋恆 Heng Sung"
         }],
         "tags": []
       }]
@@ -378,7 +381,7 @@
         "tags": []
       }, {
         "highlights": ["AppWorks School", "CH", "FrontEnd", "Workshop"],
-        "title": "一次搞懂 GraphQL 基本應用與未來潛力",
+        "title": "Getting started with GraphQL in one day",
         "speakers": [{
           "id": "jeremy_lu",
           "name": "Jeremy Lu"

@@ -1,0 +1,6 @@
+
+          window.__NEXT_REGISTER_PAGE('/Layout/BGs/BG6', function() {
+            var comp = module.exports=webpackJsonp([39],{959:function(e,t,r){e.exports=r(960)},960:function(e,t,r){"use strict";function n(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(t,"__esModule",{value:!0});var u=r(25),o=n(u),l=r(19),a=n(l),i=r(20),f=n(i),d=r(26),s=n(d),c=r(27),h=n(c),p=r(12),w=n(p),_=function(e){function t(){return(0,a.default)(this,t),(0,s.default)(this,(t.__proto__||(0,o.default)(t)).apply(this,arguments))}return(0,h.default)(t,e),(0,f.default)(t,[{key:"render",value:function(){return w.default.createElement("svg",{width:"245",height:"135",viewBox:"0 0 392 216",xmlns:"http://www.w3.org/2000/svg"},w.default.createElement("rect",{stroke:"#02F694",strokeWidth:"3",transform:"rotate(-15 -1478.346 390.345)",x:"14.114",y:"477.579",width:"396",height:"147",rx:"73.5",fill:"none",opacity:".3"}))}}]),t}(p.PureComponent);t.default=_}},[959]);
+            return { page: comp.default }
+          })
+        

@@ -94,8 +94,8 @@ class SpeakerDetail extends React.PureComponent {
           <Avatar src={avatar} />
           <End>
             <Name>{name}</Name>
-            {titles.map(this.renderTitle)}
-            {introductions.map(this.renderIntroduction)}
+            {_.map(titles, this.renderTitle)}
+            {_.map(introductions, this.renderIntroduction)}
           </End>
         </Container>
       </SpeakerWrapper>

@@ -1,0 +1,6 @@
+
+          window.__NEXT_REGISTER_PAGE('/Layout/withFedcBackground', function() {
+            var comp = module.exports=webpackJsonp([33],{969:function(e,t,n){e.exports=n(970)},970:function(e,t,n){"use strict";function r(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(t,"__esModule",{value:!0});var u=n(25),o=r(u),a=n(19),d=r(a),i=n(20),l=r(i),c=n(26),f=r(c),s=n(27),p=r(s),g=n(12),_=r(g),m=n(45),k=r(m),b=k.default.div.withConfig({displayName:"withFedcBackground__Wrapper",componentId:"s1qlwds8-0"})(["background-image:url('/static/fedc.background.svg');background-size:100%;width:100%;margin:0 auto;background-position:center 7.69rem;background-repeat:no-repeat;flex-grow:1;"]);t.default=function(e){return function(t){function n(){return(0,d.default)(this,n),(0,f.default)(this,(n.__proto__||(0,o.default)(n)).apply(this,arguments))}return(0,p.default)(n,t),(0,l.default)(n,[{key:"render",value:function(){return _.default.createElement(b,null,_.default.createElement(e,this.props))}}]),n}(g.PureComponent)}}},[969]);
+            return { page: comp.default }
+          })
+        

@@ -1,9 +1,6 @@
 module.exports = {
   exportPathMap: () => ({
     '/': { page: '/' },
-    '/agenda': { page: '/agenda' },
-    '/speakers': { page: '/speakers' },
-    '/about': { page: '/about' },
     '/blue_chen': { page: '/s/blue_chen' },
     '/ct_wu': { page: '/s/ct_wu' },
     '/kevin_tu': { page: '/s/kevin_tu' },
@@ -15,6 +12,13 @@ module.exports = {
     '/mengchih_chiang': { page: '/s/mengchih_chiang' },
     '/chris_chen': { page: '/s/chris_chen' },
     '/hsienhui_tang': { page: '/s/hsienhui_tang' },
+    '/heng_sung': { page: '/s/heng_sung' },
+    '/daisuke_sakai': { page: '/s/daisuke_sakai' },
+    '/justin_woo': { page: '/s/justin_woo' },
+    '/paul_irish': { page: '/s/paul_irish' },
+    '/liangbin_hsueh': { page: '/s/liangbin_hsueh' },
+    '/kirby_wu': { page: '/s/kirby_wu' },
+    '/chloe_jiang': { page: '/s/chloe_jiang' },
   }),
   webpack: (config) => {
     // Fixes npm packages that depend on `fs` module
