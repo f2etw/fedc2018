@@ -146,6 +146,10 @@ const Contributors = styled.div`
   color: #C2B9EE;
 `;
 
+const Link = styled.div`
+  padding: .5rem 0;
+`;
+
 const A = styled.a`
   color: #C2B9EE;
 `;
@@ -176,9 +180,12 @@ class Agenda extends React.PureComponent {
           </Information>
         </Header>
         <Main>
-          <div>
+          <Link>
             Collaborative notes: <A href="http://hackmd.io/c/fedc2018" target="fedc">http://hackmd.io/c/fedc2018</A>
-          </div>
+          </Link>
+          <Link>
+            即時口譯 (中文 CH): <A href="http://fedc.auxala.com/" target="fedc">http://fedc.auxala.com/</A>
+          </Link>
           <DateTab>14</DateTab>
           <Lunch>Lunch: 10:50 ~ 12:40 at 10F Registration</Lunch>
           <Note>{note}</Note>
