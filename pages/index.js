@@ -146,6 +146,10 @@ const Contributors = styled.div`
   color: #C2B9EE;
 `;
 
+const A = styled.a`
+  color: #C2B9EE;
+`;
+
 class Agenda extends React.PureComponent {
   renderAgendaItem = (agenda, index) =>
     (<AgendaItem key={index} {...agenda} />)
@@ -172,6 +176,9 @@ class Agenda extends React.PureComponent {
           </Information>
         </Header>
         <Main>
+          <div>
+            Collaborative notes: <A href="http://hackmd.io/c/fedc2018" target="fedc">http://hackmd.io/c/fedc2018</A>
+          </div>
           <DateTab>14</DateTab>
           <Lunch>Lunch: 10:50 ~ 12:40 at 10F Registration</Lunch>
           <Note>{note}</Note>
