@@ -3,7 +3,6 @@ import fp from 'lodash/fp';
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import withMenu from '../Layout/withMenu';
 import Wrapper from '../Layout/Wrapper';
 import withFedcBackground from '../Layout/withFedcBackground';
 import data from '../Speakers/data.json';
@@ -11,14 +10,13 @@ import data from '../Speakers/data.json';
 const SpeakerWrapper = styled(Wrapper)`
   justify-content: center;
   align-items: center;
-  min-height: calc(100vh - 8rem);
+  height: 100%;
 `;
 
 const Container = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: row;
-  margin-top: -3rem;
   max-width: 57.5rem;
   width: 100%;
 
@@ -72,6 +70,9 @@ const Introduction = styled.p`
   }
 `;
 
+const GoBack = styled.div`
+`;
+
 class SpeakerDetail extends React.PureComponent {
   renderTitle = title => <Title key={title}>{title}</Title>;
 
@@ -91,6 +92,7 @@ class SpeakerDetail extends React.PureComponent {
     return (
       <SpeakerWrapper>
         <Container>
+          <GoBack>Go Back</GoBack>
           <Avatar src={avatar} />
           <End>
             <Name>{name}</Name>
@@ -112,6 +114,5 @@ SpeakerDetail.defaultProps = {
 };
 
 export default fp.compose(
-  withMenu,
   withFedcBackground,
 )(SpeakerDetail);

@@ -1,6 +1,9 @@
 module.exports = {
   exportPathMap: () => ({
     '/': { page: '/' },
+    '/agenda': { page: '/301' },
+    '/speakers': { page: '/301' },
+    '/about': { page: '/301' },
     '/blue_chen': { page: '/s/blue_chen' },
     '/ct_wu': { page: '/s/ct_wu' },
     '/kevin_tu': { page: '/s/kevin_tu' },
