@@ -146,7 +146,7 @@ const Contributors = styled.div`
   color: #C2B9EE;
 `;
 
-const Link = styled.div`
+const LinkA = styled.div`
   padding: .5rem 0;
 `;
 
@@ -161,7 +161,7 @@ class Agenda extends React.PureComponent {
   render() {
     const { renderAgendaItem } = this;
 
-    const note = 'Starts at 10:50 continued 110 min, but have talks and pitch at the same time, you can self-planning your times.';
+    const note = 'Starts from 10:50 continued 110 min, but have talks and pitch at the same time, you can self-planning your times, and tea time start from 13:30 and ends at 16:00.';
 
     return (
       <Wrapper>
@@ -180,12 +180,12 @@ class Agenda extends React.PureComponent {
           </Information>
         </Header>
         <Main>
-          <Link>
+          <LinkA>
             Collaborative notes: <A href="http://hackmd.io/c/fedc2018" target="fedc">http://hackmd.io/c/fedc2018</A>
-          </Link>
-          <Link>
+          </LinkA>
+          <LinkA>
             即時口譯 (中文 CH): <A href="http://fedc.auxala.com/" target="fedc">http://fedc.auxala.com/</A>
-          </Link>
+          </LinkA>
           <DateTab>14</DateTab>
           <Lunch>Lunch: 10:50 ~ 12:40 at 10F Registration</Lunch>
           <Note>{note}</Note>
