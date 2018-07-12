@@ -22,6 +22,7 @@ module.exports = {
     '/liangbin_hsueh': { page: '/s/liangbin_hsueh' },
     '/kirby_wu': { page: '/s/kirby_wu' },
     '/chloe_jiang': { page: '/s/chloe_jiang' },
+    '/jeremy_lu': { page: '/s/jeremy_lu' },
   }),
   webpack: (config) => {
     // Fixes npm packages that depend on `fs` module
