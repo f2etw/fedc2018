@@ -16,13 +16,10 @@ const SpeakerWrapper = styled(Wrapper)`
 const Container = styled.div`
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   max-width: 57.5rem;
   width: 100%;
-
-  @media (max-width: 40em){
-    flex-direction: column;
-  }
+  padding: 2rem;
 `;
 
 const Avatar = styled.img`
@@ -36,11 +33,6 @@ const Avatar = styled.img`
 const End = styled.div`
   margin-top: 3.3rem;
   flex-grow: 1;
-  padding-right: 2rem;
-
-  @media (max-width: 40em){
-    padding-left: 2rem;
-  }
 `;
 
 const Name = styled.div`
@@ -70,7 +62,11 @@ const Introduction = styled.p`
   }
 `;
 
-const GoBack = styled.div`
+const GoBack = styled.a`
+  color: #C2B9EE;
+  &::before {
+    content: "< ";
+  }
 `;
 
 class SpeakerDetail extends React.PureComponent {
@@ -92,7 +88,7 @@ class SpeakerDetail extends React.PureComponent {
     return (
       <SpeakerWrapper>
         <Container>
-          <GoBack>Go Back</GoBack>
+          <GoBack href="/">Go Back</GoBack>
           <Avatar src={avatar} />
           <End>
             <Name>{name}</Name>
