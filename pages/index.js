@@ -184,6 +184,9 @@ class Agenda extends React.PureComponent {
             Collaborative notes: <A href="http://hackmd.io/c/fedc2018" target="fedc">http://hackmd.io/c/fedc2018</A>
           </LinkA>
           <LinkA>
+            Chatroom: <A href="https://gitter.im/f2etw/fedc" target="fedc">https://gitter.im/f2etw/fedc</A>
+          </LinkA>
+          <LinkA>
             即時口譯 (中文 CH): <A href="http://fedc.auxala.com/" target="fedc">http://fedc.auxala.com/</A>
           </LinkA>
           <DateTab>14</DateTab>
