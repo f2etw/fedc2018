@@ -213,5 +213,28 @@
     "introductions": [
       "現於美國擔任技術顧問，協助客戶組建開發團隊、教育訓練、導入現代化開發流程與確保程式品質，主要服務對象為企業與新創公司。同時在台灣主持 FullStackRocks.com 提供專業教育訓練，持續將北美最新技術訊息帶回與本地開發者共享。目前也是 Facebook Reactjs.tw 社團共同管理員。"
     ]
+  },
+  {
+    "id": "ted_xu",
+    "avatar": "/static/speaker/ted_xu.png",
+    "name": "許承德 Ted",
+    "title": [],
+    "introductions": [
+      "在 2017 年一月嘗試做出第一個通過驗證的 AMP 頁面後，體驗了 AMP 的速度就回不去了。2017 年底跟主管提議在即將上線的電商產品導入 AMP ，接著就是一連串在一行 JS 都不能寫的情況下，用 Hack 的心態實現了所有的互動功能。"
+    ]
+  },
+  {
+    "id": "eric_chou",
+    "avatar": "/static/speaker/eric_chou.png",
+    "name": "周鴻仁 Eric Chou",
+    "title": [],
+    "introductions": []
+  },
+  {
+    "id": "mark_wu",
+    "avatar": "/static/speaker/mark_wu.png",
+    "name": "吳自勝 Mark Wu",
+    "title": [],
+    "introductions": []
   }
 ]
