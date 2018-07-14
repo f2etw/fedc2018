@@ -1,0 +1,6 @@
+
+          window.__NEXT_REGISTER_PAGE('/Layout/BGs/BG4', function() {
+            var comp = module.exports=webpackJsonp([46],{963:function(e,t,r){e.exports=r(964)},964:function(e,t,r){"use strict";function n(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(t,"__esModule",{value:!0});var o=r(12),a=n(o),u=r(10),l=n(u),f=r(11),i=n(f),d=r(13),s=n(d),c=r(14),h=n(c),p=r(3),m=n(p),w=function(e){function t(){return(0,l.default)(this,t),(0,s.default)(this,(t.__proto__||(0,a.default)(t)).apply(this,arguments))}return(0,h.default)(t,e),(0,i.default)(t,[{key:"render",value:function(){return m.default.createElement("svg",{width:"317",height:"130",viewBox:"0 0 508 209",xmlns:"http://www.w3.org/2000/svg"},m.default.createElement("g",{transform:"translate(-11 -12)",stroke:"#02F694",strokeWidth:"8",fill:"none",fillRule:"evenodd"},m.default.createElement("rect",{opacity:".1",transform:"rotate(-15 177.387 139.496)",x:"11.387",y:"93.496",width:"332",height:"92",rx:"46"}),m.default.createElement("rect",{opacity:".3",transform:"rotate(-15 460.04 64.331)",x:"405.173",y:"18.331",width:"109.734",height:"92",rx:"46"})))}}]),t}(p.PureComponent);t.default=w}},[963]);
+            return { page: comp.default }
+          })
+        
